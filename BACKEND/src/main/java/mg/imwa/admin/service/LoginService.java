@@ -3,7 +3,7 @@ package mg.imwa.admin.service;
 import com.zaxxer.hikari.HikariDataSource;
 
 import mg.imwa.admin.model.Company;
-import mg.imwa.admin.model.SocieteStatus;
+import mg.imwa.admin.model.CompanyStatus;
 import mg.imwa.config.MapMultiTenantConnectionProvider;
 import mg.imwa.config.TenantContext;
 import mg.imwa.admin.model.TenantUser;
@@ -17,7 +17,6 @@ import mg.imwa.tenant.repository.UserRepository;
 import mg.imwa.tenant.service.CashService;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 import java.sql.Connection;
@@ -135,8 +134,8 @@ public class LoginService{
                 Optional<Company> optionalCompany = companyRepository.findByName(companyName);
                 if (optionalCompany.isPresent()){
                     Company company = optionalCompany.get();
-                    SocieteStatus societeStatus = company.getSocieteStatus();
-                    if (societeStatus.equals(SocieteStatus.ENABLED)){
+                    CompanyStatus companyStatus = company.getCompanyStatus();
+                    if (companyStatus.equals(CompanyStatus.ENABLED)){
                         initCurrentDatasourceAndTenantContext(companyName);
                         return initDashboardView(username,password,subsidiaryName,modelAndView);
                     }else modelAndView.addObject("COMPANY_DISABLED"," Votre filiale n'est pas disponible pour le moment ! Veuillez contacter les responsables du site pour plus d'information ");

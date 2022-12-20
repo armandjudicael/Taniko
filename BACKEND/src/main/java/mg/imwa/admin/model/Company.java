@@ -18,7 +18,7 @@ public class Company extends Personne{
     private String slogan;
 
     @Enumerated(EnumType.ORDINAL)
-    private SocieteStatus societeStatus = SocieteStatus.ENABLED;
+    private CompanyStatus companyStatus = CompanyStatus.ENABLED;
 
     @OneToOne(cascade = CascadeType.PERSIST)
     private CompanyDataSourceConfig companyDataSourceConfig;
@@ -39,7 +39,7 @@ public class Company extends Personne{
                 "id=" + id +
                 ", verset='" + verset + '\'' +
                 ", slogan='" + slogan + '\'' +
-                ", societeStatus=" + societeStatus +
+                ", societeStatus=" + companyStatus +
                 ", companyDataSourceConfig=" + companyDataSourceConfig +
                 ", validationKey='" + validationKey + '\'' +
                 ", isValidated=" + isValidated +

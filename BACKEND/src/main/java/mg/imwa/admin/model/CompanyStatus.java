@@ -1,5 +1,5 @@
 package mg.imwa.admin.model;
 
-public enum SocieteStatus{
+public enum CompanyStatus {
     ENABLED,DISABLED
 }
