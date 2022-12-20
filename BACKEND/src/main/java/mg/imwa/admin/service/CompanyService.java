@@ -54,7 +54,6 @@ public class CompanyService{
         return true;
     }
 
-
     public Company update(Company company,Long id){
         Optional<Company> byId = companyRepository.findById(id);
         if (byId.isPresent()){
