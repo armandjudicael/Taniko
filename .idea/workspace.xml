@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6df602c-b0a4-4bb5-9f4c-c1de5c8d6ba8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FRONT-END/src/app/service/company" />
+      <recent name="$PROJECT_DIR$/FRONT-END/src/app/service" />
       <recent name="$PROJECT_DIR$/FRONT-END/src/app/view" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -104,6 +105,10 @@
       <workItem from="1671538018776" duration="3806000" />
       <workItem from="1671543677917" duration="162000" />
       <workItem from="1671557665003" duration="682000" />
+      <workItem from="1671561614669" duration="1550000" />
+      <workItem from="1671598582695" duration="5179000" />
+      <workItem from="1671619561119" duration="747000" />
+      <workItem from="1671620993850" duration="248000" />
     </task>
     <servers />
   </component>

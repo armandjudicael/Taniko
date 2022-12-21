@@ -21,6 +21,12 @@ public class CompanyController{
     public ResponseEntity<Object> getAllCompany(){
         return new ResponseEntity<Object>(companyService.getAll(),HttpStatus.OK);
     }
+
+    @GetMapping("/companies/{id}")
+    public ResponseEntity<Object> findById(@PathVariable Long id){
+        return new ResponseEntity<Object>(companyService.findById(id),HttpStatus.OK);
+    }
+
     @PutMapping("/companies/{id}")
     public  ResponseEntity<Object> update(@RequestBody Company company,@PathVariable Long id){
         return new ResponseEntity<>(companyService.update(company,id),HttpStatus.OK);
