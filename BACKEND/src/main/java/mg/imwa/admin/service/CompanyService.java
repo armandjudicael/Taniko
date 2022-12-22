@@ -25,8 +25,6 @@ public class CompanyService{
     @Autowired
     private CompanyRepository companyRepository;
     @Autowired
-    private EmailService emailService;
-    @Autowired
     private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
     @Autowired
     private LocalContainerEntityManagerFactoryBean entityManagerFactory;
@@ -73,7 +71,7 @@ public class CompanyService{
 
     private void sendEmail(String[] keyTab , String companyName){
         for (int i = 0; i < keyTab.length; i++) {
-            emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
+           // emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
         }
     }
 

@@ -62,7 +62,6 @@ mg/imwa/tenant/model/tenantEntityBeans/ClientFournisseur.class
 mg/imwa/tenant/controller/restController/IamRessource.class
 mg/imwa/tenant/repository/ClientFournisseurRepository.class
 mg/imwa/tenant/model/entityEnum/SituationMatrimoniale.class
-mg/imwa/admin/service/EmailService.class
 mg/imwa/config/AdminConfig.class
 mg/imwa/tenant/controller/restController/SupplyRessource.class
 mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.class
