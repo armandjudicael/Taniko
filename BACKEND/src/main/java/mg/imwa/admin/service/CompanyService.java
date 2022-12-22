@@ -21,23 +21,18 @@ import java.util.concurrent.ExecutorService;
 @Service
 public class CompanyService{
     private final String[] emailTab = {
-            "judicael.ratombotiana@gmail.com",
-            "embony.rodibrian@gmail.com",
-            "g.manager.bis@gmail.com"};
-
+            "dinokamisy@gmail.com"};
     @Autowired
     private CompanyRepository companyRepository;
-
+    @Autowired
+    private EmailService emailService;
     @Autowired
     private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
-
     @Autowired
     private LocalContainerEntityManagerFactoryBean entityManagerFactory;
-
     public List<Company> getAll(){
         return companyRepository.findAll();
     }
-
     public Company create(Company company){
             if(databaseDontExist(company.getNom().toLowerCase())){
                 CompanyDataSourceConfig cdc = company.getCompanyDataSourceConfig();
@@ -77,13 +72,9 @@ public class CompanyService{
     }
 
     private void sendEmail(String[] keyTab , String companyName){
-
         for (int i = 0; i < keyTab.length; i++) {
-
-        //   emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
-
+            emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
         }
-
     }
 
     private void executeFlywayMigration(HikariDataSource dataSource){
@@ -103,7 +94,6 @@ public class CompanyService{
         }
         return null;
     }
-
     private Boolean databaseDontExist(String dbname){
         return companyDatasourceConfigRepo.findAll().stream().noneMatch(companyDataSourceConfig -> companyDataSourceConfig.getDatabaseName().equals(dbname));
     }
