@@ -1,6 +1,8 @@
 package mg.imwa.admin.model;
 
-public enum DatabaseType {
+import java.io.Serializable;
+
+public enum DatabaseType implements Serializable {
     MYSQL,POSTGRESQL,H2,SQL_SERVER,MONGODB,REDIS;
     public String dbType2String(){
         switch (this){

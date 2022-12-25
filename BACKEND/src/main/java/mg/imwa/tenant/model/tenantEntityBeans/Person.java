@@ -3,11 +3,12 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Personne {
+public abstract class Person implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

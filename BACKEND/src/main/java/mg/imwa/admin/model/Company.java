@@ -1,12 +1,12 @@
 package mg.imwa.admin.model;
 import lombok.Data;
-import mg.imwa.tenant.model.tenantEntityBeans.Personne;
+import mg.imwa.tenant.model.tenantEntityBeans.Person;
 import javax.persistence.*;
 import java.util.List;
 
 @Data
 @Entity
-public class Company extends Personne{
+public class Company extends Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long  id;

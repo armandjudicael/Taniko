@@ -54,13 +54,13 @@ public interface SalesRepository extends JpaRepository<Vente,Long>{
                                               @Param("end")LocalDate endDate);
     @Query(value = "select distinct v from vente v join v.filiale f join v.infoArticleMagasin  info where f.id=:filialeId and (v.date between :begin and :end)")
     List<Vente> getSalesBySubsidiaryAndBetweenDate(@Param("filialeId") Long filialeId,
-                                              @Param("begin") LocalDate beginDate,
-                                              @Param("end")LocalDate endDate);
+                                                   @Param("begin") LocalDate beginDate,
+                                                   @Param("end")LocalDate endDate);
 
     @Query(value = "from vente v join v.filiale f where f.id=:filialeId and (v.date between :begin and :end)")
     List<Vente>  getInvoiceBetweenDate(@Param("filialeId") Long filialeId,
-                                    @Param("begin") LocalDate beginDate,
-                                    @Param("end")LocalDate endDate);
+                                       @Param("begin") LocalDate beginDate,
+                                       @Param("end")LocalDate endDate);
     @Query(value = "select  v.ref_vente,"+
             "v.montant_vente," +
             "tmp.date date," +

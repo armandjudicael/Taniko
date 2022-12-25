@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Data
 @Getter
-public class ClientFournisseur extends Personne {
+public class ClientFournisseur extends Person {
 
     private int type;
 

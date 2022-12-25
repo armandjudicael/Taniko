@@ -2,7 +2,7 @@ package mg.imwa.tenant.service;
 
 import mg.imwa.tenant.model.entityEnum.DefaultPage;
 import mg.imwa.tenant.model.tenantEntityBeans.Fonction;
-import mg.imwa.tenant.model.tenantEntityBeans.PersonnePhysique;
+import mg.imwa.tenant.model.tenantEntityBeans.PersonPhysique;
 import mg.imwa.tenant.repository.FonctionRepository;
 import mg.imwa.tenant.repository.PersonnePhysiqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class PersonService {
     @Autowired
     private FonctionRepository fonctionRepository;
 
-    public PersonnePhysique persist(PersonnePhysique newPerson, String fonctionName){
+    public PersonPhysique persist(PersonPhysique newPerson, String fonctionName){
 
         fonctionRepository.findByName(fonctionName).ifPresentOrElse(newPerson::setFonction,()->{
             // ENREGISTREMENT DU NOUVEAU FONCTION

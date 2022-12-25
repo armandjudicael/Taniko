@@ -2,11 +2,12 @@ package mg.imwa.admin.model;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Data
-public class Filiale{
+public class Filiale implements Serializable {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;

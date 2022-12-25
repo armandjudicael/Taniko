@@ -4,10 +4,11 @@ import com.zaxxer.hikari.HikariDataSource;
 import lombok.Data;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Data
-public class CompanyDataSourceConfig{
+public class CompanyDataSourceConfig implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

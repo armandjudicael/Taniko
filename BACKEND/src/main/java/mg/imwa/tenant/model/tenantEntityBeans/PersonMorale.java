@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 
 @Entity
 @Data
-public class PersonneMorale extends Personne {
+public class PersonMorale extends Person {
     @Column(columnDefinition = "TEXT")
     private String nif;
     @Column(columnDefinition = "TEXT")

@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "personne_physique")
-public class PersonnePhysique extends Personne implements Serializable {
+public class PersonPhysique extends Person implements Serializable {
 
     @Column(columnDefinition = "TEXT")
     private String cin;

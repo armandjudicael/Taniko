@@ -27,7 +27,7 @@ public class MaterielTransport implements Serializable {
 
     @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "materiel_responsable")
-    private PersonnePhysique responsable;
+    private PersonPhysique responsable;
 
     @Enumerated(EnumType.STRING)
     private TypeMateriel typeMateriel;

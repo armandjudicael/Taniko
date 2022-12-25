@@ -1,5 +1,7 @@
 package mg.imwa.admin.model;
 
-public enum UserType {
+import java.io.Serializable;
+
+public enum UserType implements Serializable {
     COMPANY_ADMIN,SIMPLE_USER
 }

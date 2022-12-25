@@ -1,5 +1,7 @@
 package mg.imwa.admin.model;
 
-public enum CompanyStatus {
+import java.io.Serializable;
+
+public enum CompanyStatus implements Serializable {
     ENABLED,DISABLED
 }
