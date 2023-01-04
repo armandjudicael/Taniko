@@ -6,7 +6,7 @@ $(function () {
      */
     let NEW = "nouveau", EDIT = "editer";
     /* Event create new societe */
-    $(namespace + "#btn-nouveau-societe").on('click', function () {
+    $(namespace + "#btn-nouveau-societe").on('click',function () {
         $(namespace +"#nouveau-societe .modal-title").text("Nouveau Societe")
         $(namespace +"#nouveau-societe").modal('show')
         $(namespace +"#nouveau-societe").attr('data-id', NEW)
