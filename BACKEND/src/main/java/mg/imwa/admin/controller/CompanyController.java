@@ -14,7 +14,7 @@ public class CompanyController{
     @PostMapping("/companies")
     public ResponseEntity<Object> create(@RequestBody Company company){
         Company company1 = companyService.create(company);
-        if (company1!=null) new ResponseEntity<>(company1,HttpStatus.CREATED);
+        if (company1!=null) new ResponseEntity<>(company1,HttpStatus.OK);
         return new ResponseEntity<>( " The company with the name "+company.getNom().toLowerCase()+" already exist !" ,HttpStatus.EXPECTATION_FAILED);
     }
     @GetMapping("/companies")

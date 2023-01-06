@@ -10,25 +10,25 @@
 //
 //@Service
 //public class EmailService{
-//    @Autowired
-//   // private JavaMailSender javaMailSender;
-//    @Value("${spring.mail.username}") private String sender;
-//    public void sendEmail(String to ,String body,String subject){
-//        SimpleMailMessage smm = new SimpleMailMessage();
-//        smm.setFrom(sender);
-//        smm.setText(body);
-//        smm.setTo(to);
-//        smm.setSentDate(Date.from(Instant.now()));
-//        smm.setSubject(subject);
-//    //    javaMailSender.send(smm);
-//    }
-//    public void sendEmail(EmailInfo info){
-//        SimpleMailMessage smm = new SimpleMailMessage();
-//        smm.setFrom(sender);
-//        smm.setText(info.getMsgBody());
-//        smm.setTo(info.getRecipient());
-//        smm.setSentDate(Date.from(Instant.now()));
-//        smm.setSubject(info.getSubject());
-//   //     javaMailSender.send(smm);
-//    }
+////    @Autowired
+////    private JavaMailSender javaMailSender;
+////    @Value("${spring.mail.username}") private String sender;
+////    public void sendEmail(String to ,String body,String subject){
+////        SimpleMailMessage smm = new SimpleMailMessage();
+////        smm.setFrom(sender);
+////        smm.setText(body);
+////        smm.setTo(to);
+////        smm.setSentDate(Date.from(Instant.now()));
+////        smm.setSubject(subject);
+////        javaMailSender.send(smm);
+////    }
+////    public void sendEmail(EmailInfo info){
+////        SimpleMailMessage smm = new SimpleMailMessage();
+////        smm.setFrom(sender);
+////        smm.setText(info.getMsgBody());
+////        smm.setTo(info.getRecipient());
+////        smm.setSentDate(Date.from(Instant.now()));
+////        smm.setSubject(info.getSubject());
+////        javaMailSender.send(smm);
+////    }
 //}

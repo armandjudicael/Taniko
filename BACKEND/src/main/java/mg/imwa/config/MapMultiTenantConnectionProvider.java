@@ -7,7 +7,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 public class MapMultiTenantConnectionProvider extends AbstractMultiTenantConnectionProvider{
-
     private Map<String,ConnectionProvider> connectionProviderMap = new ConcurrentHashMap<>();
 
     public MapMultiTenantConnectionProvider() {

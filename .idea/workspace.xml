@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b6df602c-b0a4-4bb5-9f4c-c1de5c8d6ba8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/webapp/assets/js/menu/administrateur/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/webapp/assets/js/menu/administrateur/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/MapMultiTenantConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/MapMultiTenantConnectionProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/DATABASE_RESET.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/DATABASE_RESET.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +56,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2JAcTHzgcj7UxcKqG4bgOMwmKmn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -181,7 +190,13 @@
       <workItem from="1672748619869" duration="1045000" />
       <workItem from="1672763017352" duration="10000" />
       <workItem from="1672811372444" duration="235000" />
-      <workItem from="1672830255428" duration="5874000" />
+      <workItem from="1672830255428" duration="6630000" />
+      <workItem from="1672917988097" duration="99000" />
+      <workItem from="1672918185246" duration="2113000" />
+      <workItem from="1673004846457" duration="2524000" />
+      <workItem from="1673007624941" duration="5622000" />
+      <workItem from="1673014544127" duration="46000" />
+      <workItem from="1673014835948" duration="2344000" />
     </task>
     <servers />
   </component>

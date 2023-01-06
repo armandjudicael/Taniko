@@ -26,6 +26,10 @@ public class CompanyService{
     private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
     @Autowired
     private LocalContainerEntityManagerFactoryBean entityManagerFactory;
+
+//    @Autowired
+//    private EmailService emailService;
+
     public List<Company> getAll(){
         return companyRepository.findAll();
     }
@@ -69,7 +73,7 @@ public class CompanyService{
 
     private void sendEmail(String[] keyTab , String companyName){
         for (int i = 0; i < keyTab.length; i++) {
-           // emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
+          // emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
         }
     }
 
