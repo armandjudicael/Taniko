@@ -5,16 +5,20 @@ import mg.imwa.admin.model.Company;
 import mg.imwa.admin.model.CompanyDataSourceConfig;
 import mg.imwa.admin.repository.CompanyDatasourceConfigRepo;
 import mg.imwa.admin.repository.CompanyRepository;
+import mg.imwa.config.MapMultiTenantConnectionProvider;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.output.MigrateResult;
+import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.support.QuerydslJpaRepository;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Service;
 import java.sql.*;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @Service
 public class CompanyService{
@@ -26,6 +30,9 @@ public class CompanyService{
     private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
     @Autowired
     private LocalContainerEntityManagerFactoryBean entityManagerFactory;
+
+    @Autowired
+    private MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider;
 
 //    @Autowired
 //    private EmailService emailService;
@@ -46,6 +53,26 @@ public class CompanyService{
     }
 
     public Boolean delete(Long id){
+        companyRepository.findById(id).ifPresent(company -> {
+            String companyName = company.getNom();
+            //  GET THE CONNECTION PROVIDER RELATED TO THE DATABASE
+            ConnectionProvider connectionProvider = mapMultiTenantConnectionProvider.getConnectionProviderMap().get(companyName);
+            if (connectionProvider!=null){
+                try {
+                    Connection dbConnection = connectionProvider.getConnection();
+                    if (!dbConnection.isClosed()){
+                        // CLOSE THE CONNECTION
+                        dbConnection.close();
+                    }
+                    String databaseName = company.getCompanyDataSourceConfig().getDatabaseName();
+                    executeNativeQuery(" DELETE DATABASE "+databaseName);
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            // DELETE THE COMPANY ON THE DB
+            companyRepository.delete(company);
+        });
         return true;
     }
 
@@ -85,15 +112,20 @@ public class CompanyService{
 
     private Void createNewDatabase(String databaseName,CompanyDataSourceConfig cdc){
         try {
-                Connection connection = Objects.requireNonNull(entityManagerFactory.getDataSource()).getConnection();
-                connection.createStatement().execute(" CREATE DATABASE "+ databaseName +";");
-                HikariDataSource hikariDataSource = cdc.initDatasource();
+            executeNativeQuery(" CREATE DATABASE "+ databaseName +";");
+            HikariDataSource hikariDataSource = cdc.initDatasource();
                 executeFlywayMigration(hikariDataSource);
         } catch (SQLException throwables){
             throwables.printStackTrace();
         }
         return null;
     }
+
+    private void executeNativeQuery(String query) throws SQLException {
+        Connection connection = Objects.requireNonNull(entityManagerFactory.getDataSource()).getConnection();
+        connection.createStatement().execute(query);
+    }
+
     private Boolean databaseDontExist(String dbname){
         return companyDatasourceConfigRepo.findAll().stream().noneMatch(companyDataSourceConfig -> companyDataSourceConfig.getDatabaseName().equals(dbname));
     }

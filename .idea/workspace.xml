@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6df602c-b0a4-4bb5-9f4c-c1de5c8d6ba8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/CompanyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/MapMultiTenantConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/MapMultiTenantConnectionProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/DATABASE_RESET.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/DATABASE_RESET.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/appConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/appConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JAcTHzgcj7UxcKqG4bgOMwmKmn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -196,7 +193,11 @@
       <workItem from="1673004846457" duration="2524000" />
       <workItem from="1673007624941" duration="5622000" />
       <workItem from="1673014544127" duration="46000" />
-      <workItem from="1673014835948" duration="2344000" />
+      <workItem from="1673014835948" duration="2715000" />
+      <workItem from="1673099619244" duration="2264000" />
+      <workItem from="1673103702104" duration="680000" />
+      <workItem from="1673202487742" duration="606000" />
+      <workItem from="1673242376233" duration="3242000" />
     </task>
     <servers />
   </component>

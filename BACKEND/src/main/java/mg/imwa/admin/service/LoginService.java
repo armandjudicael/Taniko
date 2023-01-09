@@ -146,7 +146,7 @@ public class LoginService{
 
     public void initCurrentDatasourceAndTenantContext(String companyName){
         Map<String, ConnectionProvider> connectionProviderMap = mapMultiTenantConnectionProvider.getConnectionProviderMap();
-        if (!connectionProviderMap.isEmpty() && connectionProviderMap.containsKey(companyName)) {
+        if (!connectionProviderMap.isEmpty() && connectionProviderMap.containsKey(companyName)){
             TenantContext.setTenantId(companyName);
         } else findOnCompanyTable(companyName,connectionProviderMap);
     }
