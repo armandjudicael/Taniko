@@ -1,6 +1,6 @@
 package mg.imwa.admin.repository;
 
-import mg.imwa.admin.model.Company;
+import mg.imwa.admin.model.Entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

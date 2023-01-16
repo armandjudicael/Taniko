@@ -1,8 +1,9 @@
 package mg.imwa.admin.service;
 
 import com.zaxxer.hikari.HikariDataSource;
-import mg.imwa.admin.model.Company;
-import mg.imwa.admin.model.CompanyDataSourceConfig;
+import lombok.extern.slf4j.Slf4j;
+import mg.imwa.admin.model.Entity.Company;
+import mg.imwa.admin.model.Entity.CompanyDataSourceConfig;
 import mg.imwa.admin.repository.CompanyDatasourceConfigRepo;
 import mg.imwa.admin.repository.CompanyRepository;
 import mg.imwa.config.MapMultiTenantConnectionProvider;
@@ -11,16 +12,15 @@ import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.output.MigrateResult;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.support.QuerydslJpaRepository;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Service;
 import java.sql.*;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 @Service
+@Slf4j
 public class CompanyService{
     private final String[] emailTab = {
             "dinokamisy@gmail.com"};
@@ -53,6 +53,7 @@ public class CompanyService{
     }
 
     public Boolean delete(Long id){
+
         companyRepository.findById(id).ifPresent(company -> {
             String companyName = company.getNom();
             //  GET THE CONNECTION PROVIDER RELATED TO THE DATABASE
@@ -64,16 +65,22 @@ public class CompanyService{
                         // CLOSE THE CONNECTION
                         dbConnection.close();
                     }
-                    String databaseName = company.getCompanyDataSourceConfig().getDatabaseName();
-                    executeNativeQuery(" DELETE DATABASE "+databaseName);
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
             }
+            String databaseName = company.getCompanyDataSourceConfig().getDatabaseName();
+            try {
+                executeNativeQuery("DROP DATABASE "+databaseName);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
             // DELETE THE COMPANY ON THE DB
             companyRepository.delete(company);
         });
+
         return true;
+
     }
 
     public Company findById(Long id){
@@ -112,9 +119,9 @@ public class CompanyService{
 
     private Void createNewDatabase(String databaseName,CompanyDataSourceConfig cdc){
         try {
-            executeNativeQuery(" CREATE DATABASE "+ databaseName +";");
+            executeNativeQuery("CREATE DATABASE "+ databaseName +";");
             HikariDataSource hikariDataSource = cdc.initDatasource();
-                executeFlywayMigration(hikariDataSource);
+            executeFlywayMigration(hikariDataSource);
         } catch (SQLException throwables){
             throwables.printStackTrace();
         }

@@ -1,5 +1,5 @@
 package mg.imwa.admin.controller;
-import mg.imwa.admin.model.UserType;
+import mg.imwa.admin.model.Enum.UserType;
 import mg.imwa.admin.repository.AdminUserRepository;
 import mg.imwa.admin.repository.CompanyRepository;
 import mg.imwa.admin.repository.TenantUserRepository;

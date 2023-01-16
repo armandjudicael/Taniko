@@ -1,4 +1,4 @@
-package mg.imwa.admin.model;
+package mg.imwa.admin.model.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

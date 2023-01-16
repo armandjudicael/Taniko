@@ -1,5 +1,7 @@
-package mg.imwa.admin.model;
+package mg.imwa.admin.model.Entity;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.tenant.model.tenantEntityBeans.Person;
 import javax.persistence.*;
 import java.util.List;

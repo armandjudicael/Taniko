@@ -1,6 +1,6 @@
 package mg.imwa.admin.repository;
-import mg.imwa.admin.model.TenantUser;
-import mg.imwa.admin.model.UserType;
+import mg.imwa.admin.model.Entity.TenantUser;
+import mg.imwa.admin.model.Enum.UserType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

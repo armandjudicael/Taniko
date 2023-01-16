@@ -2,11 +2,12 @@ package mg.imwa.admin.service;
 
 import com.zaxxer.hikari.HikariDataSource;
 
-import mg.imwa.admin.model.Company;
-import mg.imwa.admin.model.CompanyStatus;
+import lombok.extern.slf4j.Slf4j;
+import mg.imwa.admin.model.Entity.Company;
+import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.config.MapMultiTenantConnectionProvider;
 import mg.imwa.config.TenantContext;
-import mg.imwa.admin.model.TenantUser;
+import mg.imwa.admin.model.Entity.TenantUser;
 import mg.imwa.admin.repository.CompanyRepository;
 import mg.imwa.admin.repository.TenantUserRepository;
 import mg.imwa.tenant.model.tenantEntityBeans.ClientFournisseur;
@@ -27,6 +28,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class LoginService{
 
     @Autowired private CompanyRepository companyRepository;
@@ -123,7 +125,6 @@ public class LoginService{
         });
         return modelAndView;
     }
-
     public ModelAndView checkTenantandSubsidiary(String username,String password,String key){
             ModelAndView modelAndView = new ModelAndView(TENANT_LOGIN_VIEW);
             Optional<TenantUser> optionalTenantUser = tenantUserRepository.findByUsernameAndPasswordAndKey(username,password,key);
@@ -143,14 +144,12 @@ public class LoginService{
             }
         return modelAndView;
     }
-
     public void initCurrentDatasourceAndTenantContext(String companyName){
         Map<String, ConnectionProvider> connectionProviderMap = mapMultiTenantConnectionProvider.getConnectionProviderMap();
         if (!connectionProviderMap.isEmpty() && connectionProviderMap.containsKey(companyName)){
             TenantContext.setTenantId(companyName);
         } else findOnCompanyTable(companyName,connectionProviderMap);
     }
-
     private void findOnCompanyTable(String companyName,Map<String, ConnectionProvider> connectionProviderMap){
         companyRepository.findByName(companyName).ifPresent(company -> {
             HikariDataSource hikariDataSource = company.getCompanyDataSourceConfig().initDatasource();

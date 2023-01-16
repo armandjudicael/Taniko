@@ -1,6 +1,7 @@
-package mg.imwa.admin.model;
+package mg.imwa.admin.model.Entity;
 import lombok.Data;
-import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+import mg.imwa.admin.model.Enum.UserType;
 
 import javax.persistence.*;
 
@@ -10,7 +11,6 @@ public class TenantUser extends Admin{
     private String key;
     @Enumerated(value = EnumType.ORDINAL)
     private UserType userType;
-
     @Override
     public String toString() {
         return "TenantUser{" +

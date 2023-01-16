@@ -1,4 +1,4 @@
-package mg.imwa.admin.model;
+package mg.imwa.admin.model.Enum;
 
 import java.io.Serializable;
 

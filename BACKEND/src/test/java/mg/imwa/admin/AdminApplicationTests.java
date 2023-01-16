@@ -7,12 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class AdminApplicationTests{
-
 	@Autowired
 	private CompanyRepository companyRepository;
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
