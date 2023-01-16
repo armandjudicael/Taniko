@@ -8,11 +8,13 @@
 		<version>2.6.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<packaging>war</packaging>
 	<groupId>mg.imwa</groupId>
 	<artifactId>admin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>spring boot inventory web app </description>
+
 	<properties>
 		<java.version>11</java.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
@@ -29,6 +31,13 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.12.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>3.18.1</version>
 		</dependency>
 
 		<dependency>

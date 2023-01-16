@@ -18,4 +18,5 @@ public class TenantUser extends Admin{
                 ", userType=" + userType +super.toString()+
                 '}';
     }
+
 }
