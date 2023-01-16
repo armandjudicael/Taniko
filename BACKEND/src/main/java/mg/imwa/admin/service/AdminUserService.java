@@ -8,17 +8,20 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Service
 @Slf4j
-public class AdminUserService implements UserDetailsService{
-    @Autowired
-    private AdminUserRepository adminUserRepository;
+@Transactional(transactionManager = "adminTransactionManager")
+public class AdminUserService implements UserDetailsService,BasicServiceMethod<Admin>{
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
         Optional<Admin> byUserName = adminUserRepository.findByUserName(username);
@@ -32,4 +35,53 @@ public class AdminUserService implements UserDetailsService{
         }
         return null;
     }
+
+    @Override
+    public Admin create(Admin object) {
+        object.setPassword(bCryptPasswordEncoder.encode(object.getPassword()));
+        object.setUserName(bCryptPasswordEncoder.encode(object.getUserName()));
+        return adminUserRepository.save(object);
+    }
+
+    @Override
+    public Admin updateById(Long id) {
+        return null;
+    }
+
+    @Override
+    public Admin update(Admin object,Long id){
+        return null;
+    }
+
+    @Override
+    public Boolean deleteById(Long id) {
+        return null;
+    }
+
+    @Override
+    public Boolean delete(Admin obejct) {
+        return null;
+    }
+
+    @Override
+    public List<Admin> findAll() {
+        return null;
+    }
+
+    @Override
+    public Optional<Admin> findById(Long id) {
+        return Optional.empty();
+    }
+
+    public void setbCryptPasswordEncoder(BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+    public void setAdminUserRepository(AdminUserRepository adminUserRepository) {
+        this.adminUserRepository = adminUserRepository;
+    }
+
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+
+    private AdminUserRepository adminUserRepository;
 }

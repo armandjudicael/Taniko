@@ -18,7 +18,11 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"mg.imwa.admin.model","mg.imwa.admin.repository","mg.imwa.admin.service"}
+@EnableJpaRepositories(basePackages={
+        "mg.imwa.admin.model",
+        "mg.imwa.admin.repository",
+        "mg.imwa.admin.service"
+}
 ,entityManagerFactoryRef = "adminEntityManagerFactory",transactionManagerRef = "adminTransactionManager")
 @EnableTransactionManagement
 public class AdminConfig{
@@ -42,8 +46,7 @@ public class AdminConfig{
     @Bean(name = "adminEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean memberEntityManagerFactory(){
         HashMap<String, Object> jpaPropertiesMap = new HashMap<>();
-        jpaPropertiesMap.put("hibernate.dialect",
-                "org.hibernate.dialect.PostgreSQLDialect");
+        jpaPropertiesMap.put("hibernate.dialect","org.hibernate.dialect.PostgreSQLDialect");
         jpaPropertiesMap.put("hibernate.physical_naming_strategy",
                 "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
         jpaPropertiesMap.put("hibernate.implicit_naming_strategy","org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
@@ -59,7 +62,6 @@ public class AdminConfig{
         em.setPersistenceUnitName("admin-unit");
         return em;
     }
-
     @Primary
     @Bean(name = "adminTransactionManager")
     public PlatformTransactionManager memberTransactionManager(
@@ -68,4 +70,5 @@ public class AdminConfig{
         jpaTransactionManager.setEntityManagerFactory(memberEntityManagerFactory.getObject());
         return jpaTransactionManager;
     }
+
 }

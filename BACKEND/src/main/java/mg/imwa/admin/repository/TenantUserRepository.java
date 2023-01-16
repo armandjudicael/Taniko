@@ -10,9 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Repository
-@Transactional(transactionManager = "adminTransactionManager")
 public interface TenantUserRepository extends JpaRepository<TenantUser,Long>{
-
     @Query(value = "select t from TenantUser t,Admin  a where t.userName=:username and t.password=:password and t.key=:key and t.userType=:type and t.id=a.id")
     Optional<TenantUser> findByUsernameAndPasswordAndKey(@Param("username") String username,
                                                          @Param("password") String password,

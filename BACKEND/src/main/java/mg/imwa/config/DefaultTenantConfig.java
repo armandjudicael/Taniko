@@ -1,6 +1,5 @@
 package mg.imwa.config;
 import com.zaxxer.hikari.HikariDataSource;
-import org.apache.commons.dbcp.BasicDataSource;
 import org.hibernate.MultiTenancyStrategy;
 import org.hibernate.cfg.Environment;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
@@ -20,7 +19,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-
 @Configuration
 @EnableJpaRepositories(basePackages = {"mg.imwa.tenant.model","mg.imwa.tenant.repository","mg.imwa.tenant.service"}
         ,entityManagerFactoryRef = "defaultTenantEmf",transactionManagerRef = "defaultTenantTxManager")
@@ -32,7 +30,6 @@ public class DefaultTenantConfig{
     public DataSourceProperties defaultTenantDataSourceProperties() {
         return new DataSourceProperties();
     }
-
     @Bean("defaultDatasource")
     @ConfigurationProperties("default.datasource.configuration")
     public HikariDataSource defaultTenantDataSource(){
@@ -41,9 +38,11 @@ public class DefaultTenantConfig{
     }
 
     @Bean("defaultTenantEmf")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(@Qualifier("defaultDatasource") DataSource dataSource,
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
+                                                                       @Qualifier("defaultDatasource") DataSource dataSource,
                                                                        MapMultiTenantConnectionProvider multiTenantConnectionProvider,
-                                                                       TenantIdentifierResolver tenantIdentifierResolver){
+                                                                       TenantIdentifierResolver tenantIdentifierResolver
+                                                                       ){
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         Map<String, ConnectionProvider> connectionProviderMap = multiTenantConnectionProvider.getConnectionProviderMap();
         connectionProviderMap.put("default_tenant",new ConnectionProvider() {
@@ -82,7 +81,7 @@ public class DefaultTenantConfig{
                 "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
         jpaPropertiesMap.put("hibernate.implicit_naming_strategy","org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
         jpaPropertiesMap.put("hibernate.hbm2ddl.auto","update");
-        jpaPropertiesMap.put("hibernate.show_sql","true");
+//        jpaPropertiesMap.put("hibernate.show_sql","true");
         jpaPropertiesMap.put("hibernate.enable_lazy_load_no_trans","true");
         jpaPropertiesMap.put(Environment.MULTI_TENANT,MultiTenancyStrategy.DATABASE);
         jpaPropertiesMap.put(Environment.MULTI_TENANT_CONNECTION_PROVIDER,multiTenantConnectionProvider);
@@ -90,7 +89,6 @@ public class DefaultTenantConfig{
         em.setJpaPropertyMap(jpaPropertiesMap);
         return em;
     }
-
     @Bean(name = "defaultTenantTxManager")
     public PlatformTransactionManager defaultTenantTransactionManager(
             final @Qualifier("defaultTenantEmf") LocalContainerEntityManagerFactoryBean memberEntityManagerFactory) {

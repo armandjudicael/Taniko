@@ -20,7 +20,7 @@ public class CompanyController{
     }
     @GetMapping("/companies")
     public ResponseEntity<Object> getAllCompany(){
-        return new ResponseEntity<Object>(companyService.getAll(),HttpStatus.OK);
+        return new ResponseEntity<Object>(companyService.findAll(),HttpStatus.OK);
     }
 
     @GetMapping("/companies/{id}")
@@ -34,6 +34,6 @@ public class CompanyController{
     }
     @DeleteMapping("/companies/{id}")
     public ResponseEntity<Object> delete(@PathVariable Long id){
-        return new ResponseEntity<>(companyService.delete(id),HttpStatus.OK);
+        return new ResponseEntity<>(companyService.deleteById(id),HttpStatus.OK);
     }
 }

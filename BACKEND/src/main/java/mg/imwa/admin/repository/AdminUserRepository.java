@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 @Repository
-@Transactional(transactionManager = "adminTransactionManager")
 public interface AdminUserRepository extends JpaRepository<Admin,Long>{
     @Query(value = "from Admin a where a.userName=:username")
     Optional<Admin> findByUserName(@Param("username") String username);

@@ -6,7 +6,5 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@Transactional(transactionManager = "adminTransactionManager")
 public interface AdminSubsidiaryRepository extends JpaRepository<Filiale,Long>{
-
 }

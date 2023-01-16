@@ -11,9 +11,10 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.output.MigrateResult;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.sql.*;
 import java.util.List;
 import java.util.Objects;
@@ -21,72 +22,84 @@ import java.util.Optional;
 
 @Service
 @Slf4j
-public class CompanyService{
+@Transactional(transactionManager = "adminTransactionManager")
+public class CompanyService implements BasicServiceMethod<Company> {
     private final String[] emailTab = {
             "dinokamisy@gmail.com"};
-    @Autowired
-    private CompanyRepository companyRepository;
-    @Autowired
-    private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
-    @Autowired
-    private LocalContainerEntityManagerFactoryBean entityManagerFactory;
-
-    @Autowired
-    private MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider;
-
-//    @Autowired
-//    private EmailService emailService;
-
-    public List<Company> getAll(){
-        return companyRepository.findAll();
-    }
+    @Override
     public Company create(Company company){
-            if(databaseDontExist(company.getNom().toLowerCase())){
-                CompanyDataSourceConfig cdc = company.getCompanyDataSourceConfig();
-                String databaseName = cdc.getDatabaseName().toLowerCase();
-                createNewDatabase(databaseName,cdc);
-                String validationKey = generateValidationKey(company.getNom());
-                company.setValidationKey(validationKey);
-                return companyRepository.save(company);
-            }
-            return null;
-    }
-
-    public Boolean delete(Long id){
-
-        companyRepository.findById(id).ifPresent(company -> {
-            String companyName = company.getNom();
-            //  GET THE CONNECTION PROVIDER RELATED TO THE DATABASE
-            ConnectionProvider connectionProvider = mapMultiTenantConnectionProvider.getConnectionProviderMap().get(companyName);
-            if (connectionProvider!=null){
+        String dbName = company.getCompanyDataSourceConfig().getDatabaseName();
+        if(databaseDontExistOnPgServer(dbName)){
                 try {
-                    Connection dbConnection = connectionProvider.getConnection();
-                    if (!dbConnection.isClosed()){
-                        // CLOSE THE CONNECTION
-                        dbConnection.close();
-                    }
+                    executeNativeQuery("CREATE DATABASE "+dbName+";");
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
-            }
-            String databaseName = company.getCompanyDataSourceConfig().getDatabaseName();
-            try {
-                executeNativeQuery("DROP DATABASE "+databaseName);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-            // DELETE THE COMPANY ON THE DB
-            companyRepository.delete(company);
-        });
-
-        return true;
-
+                return null;
+        }
+        CompanyDataSourceConfig cdc = company.getCompanyDataSourceConfig();
+        HikariDataSource hikariDataSource = cdc.initDatasource();
+        executeFlywayMigration(hikariDataSource);
+        String validationKey = generateValidationKey(company.getNom());
+        company.setValidationKey(validationKey);
+        return companyRepository.save(company);
     }
 
-    public Company findById(Long id){
-        return companyRepository.findById(id).get();
+    @Override
+    public Company updateById(Long id) {
+        return null;
     }
 
+
+
+    @Override
+    public Boolean deleteById(Long id) {
+        Optional<Company> byId = companyRepository.findById(id);
+       if (byId.isPresent()){
+           Company company = byId.get();
+           String companyName = company.getNom();
+           //  GET THE CONNECTION PROVIDER RELATED TO THE DATABASE
+           ConnectionProvider connectionProvider = mapMultiTenantConnectionProvider.getConnectionProviderMap().get(companyName);
+           if (connectionProvider!=null){
+               try {
+                   Connection dbConnection = connectionProvider.getConnection();
+                   if (!dbConnection.isClosed()){
+                       // CLOSE THE CONNECTION
+                       dbConnection.close();
+                   }
+               } catch (SQLException e) {
+                   throw new RuntimeException(e);
+               }
+           }
+           String databaseName = company.getCompanyDataSourceConfig().getDatabaseName();
+           try {
+               executeNativeQuery("DROP DATABASE "+databaseName);
+           } catch (SQLException e) {
+               throw new RuntimeException(e);
+           }
+           // DELETE THE COMPANY ON THE DB
+           companyRepository.delete(company);
+
+           return databaseDontExist(databaseName);
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean delete(Company obejct) {
+        return deleteById(obejct.getId());
+    }
+
+    @Override
+    public List<Company> findAll() {
+        return companyRepository.findAll();
+    }
+
+    @Override
+    public Optional<Company> findById(Long id) {
+        return companyRepository.findById(id);
+    }
+    @Override
     public Company update(Company company,Long id){
         Optional<Company> byId = companyRepository.findById(id);
         if (byId.isPresent()){
@@ -110,30 +123,37 @@ public class CompanyService{
           // emailService.sendEmail(emailTab[i],"Clé d'activation de la societé "+companyName+" : "+keyTab[i]," Activation de la societé "+companyName);
         }
     }
-
-    private void executeFlywayMigration(HikariDataSource dataSource){
+    public static void executeFlywayMigration(HikariDataSource dataSource){
         Flyway flyway = Flyway.configure().dataSource(dataSource).load();
         MigrateResult migrate = flyway.migrate();
         dataSource.close();
     }
-
-    private Void createNewDatabase(String databaseName,CompanyDataSourceConfig cdc){
-        try {
-            executeNativeQuery("CREATE DATABASE "+ databaseName +";");
-            HikariDataSource hikariDataSource = cdc.initDatasource();
-            executeFlywayMigration(hikariDataSource);
-        } catch (SQLException throwables){
-            throwables.printStackTrace();
-        }
-        return null;
-    }
-
     private void executeNativeQuery(String query) throws SQLException {
         Connection connection = Objects.requireNonNull(entityManagerFactory.getDataSource()).getConnection();
         connection.createStatement().execute(query);
     }
-
     private Boolean databaseDontExist(String dbname){
         return companyDatasourceConfigRepo.findAll().stream().noneMatch(companyDataSourceConfig -> companyDataSourceConfig.getDatabaseName().equals(dbname));
     }
+    private Boolean databaseDontExistOnPgServer(String dbname){
+        return companyRepository.databaseDontExistOnPgServer(dbname)==0;
+    }
+    public void setCompanyRepository(CompanyRepository companyRepository) {
+        this.companyRepository = companyRepository;
+    }
+    public void setCompanyDatasourceConfigRepo(CompanyDatasourceConfigRepo companyDatasourceConfigRepo) {
+        this.companyDatasourceConfigRepo = companyDatasourceConfigRepo;
+    }
+    public void setEntityManagerFactory(LocalContainerEntityManagerFactoryBean entityManagerFactory) {
+        this.entityManagerFactory = entityManagerFactory;
+    }
+    public void setMapMultiTenantConnectionProvider(MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider) {
+        this.mapMultiTenantConnectionProvider = mapMultiTenantConnectionProvider;
+    }
+    //private EmailService emailService;
+    private CompanyRepository companyRepository;
+    private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
+    private LocalContainerEntityManagerFactoryBean entityManagerFactory;
+    private MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider;
+
 }

@@ -19,6 +19,7 @@ import mg.imwa.tenant.service.CashService;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -30,7 +31,6 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 public class LoginService{
-
     @Autowired private CompanyRepository companyRepository;
     @Autowired private MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider;
     @Autowired private TenantUserRepository tenantUserRepository;

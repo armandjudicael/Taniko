@@ -10,13 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@SessionAttributes(names = {"tenantAdmin","imwaAdmin","connectedUser"})
+//@SessionAttributes(names = {"tenantAdmin","imwaAdmin","connectedUser"})
 public class LoginController{
 
     private final String COMPANY_LIST="companies";

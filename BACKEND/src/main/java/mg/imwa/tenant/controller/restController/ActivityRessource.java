@@ -16,7 +16,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1")
 public class ActivityRessource {
-
     @Autowired
     private ActivityRepository activityRepository;
 
@@ -29,7 +28,6 @@ public class ActivityRessource {
 //        return  new ResponseEntity<>(activityRepository.findAllByDate(date),HttpStatus.OK);
         return null;
     }
-
     @GetMapping("/activities/{magasinId}/{articleId}/{uniteId}")
     public ResponseEntity<Object> getAllActivitiesByItemAndUnit(@PathVariable("magasinId") Long storeId,
                                                                 @PathVariable("articleId") Long itemId,

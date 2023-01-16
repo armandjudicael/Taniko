@@ -1,5 +1,4 @@
 package mg.imwa.config;
-
 import lombok.RequiredArgsConstructor;
 import mg.imwa.admin.service.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
