@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6df602c-b0a4-4bb5-9f4c-c1de5c8d6ba8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/AdminUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/BasicServiceMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/AdminSubsidiaryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/AdminSubsidiaryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/AdminUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/AdminUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/CompanyDatasourceConfigRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/CompanyDatasourceConfigRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/TenantUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/repository/TenantUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Role.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/AdminUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/AdminUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/AdminConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/AdminConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/CustomAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/AsyncConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/AsyncConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/DefaultTenantConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/DefaultTenantConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/ActivityRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/ActivityRessource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/db/migration/V1__tenant.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/db/migration/V1__tenant.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,6 +197,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SQLScriptSettings">
+    <option name="matrix">
+      <map>
+        <entry key="POSTGRES.CreateComplete" value="CreateIfNotExists=1, Owner=1, UserGrants=1" />
+      </map>
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -269,7 +265,8 @@
       <workItem from="1673865358088" duration="1566000" />
       <workItem from="1673868112759" duration="7753000" />
       <workItem from="1673878568348" duration="2985000" />
-      <workItem from="1673887097680" duration="9654000" />
+      <workItem from="1673887097680" duration="13230000" />
+      <workItem from="1673940840314" duration="4007000" />
     </task>
     <servers />
   </component>
@@ -299,6 +296,12 @@
           <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/AdminUserController.java</url>
           <line>20</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java</url>
+          <line>19</line>
+          <properties field="password" class="mg.imwa.admin.model.Entity.Admin" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

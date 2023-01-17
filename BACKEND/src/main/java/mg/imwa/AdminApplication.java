@@ -1,21 +1,20 @@
 package mg.imwa;
+import com.zaxxer.hikari.HikariDataSource;
 import mg.imwa.admin.model.Entity.*;
 import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.admin.model.Enum.DatabaseType;
 import mg.imwa.admin.model.Enum.UserType;
-import mg.imwa.admin.repository.AdminUserRepository;
-import mg.imwa.admin.repository.CompanyRepository;
+import mg.imwa.admin.service.AdminUserService;
 import mg.imwa.admin.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
 import java.util.Optional;
 
 @SpringBootApplication(scanBasePackages ={
@@ -36,22 +35,18 @@ public class AdminApplication implements CommandLineRunner{
 		SpringApplication.run(AdminApplication.class, args);
 	}
 	@Override public void run(String... args) throws Exception{
-		initAppAdministrator();
-		initDefaultCompanydb();
+		initErp();
 	}
 
-	private void initAppAdministrator(){
+	private void initErp(){
 		String adminUsername = "armand_judicael";
-		Optional<Admin> byUserName = adminUserRepository.findByUserName(adminUsername);
+		Optional<Admin> byUserName = adminUserService.findByUserName(adminUsername);
 		if (byUserName.isEmpty()){
 			Admin admin = new Admin();
 			admin.setUserName(adminUsername);
 			admin.setPassword("Aj!30071999");
-//			String roles[] = {"SIMPLE_ADMIN","SUPER_ADMIN","MANAGER","ANALYST"};
-//			List<Role> roleList = new ArrayList<>();
-//			Arrays.stream(roles).forEach(s -> roleList.add(new Role(s)));
-//			admin.setRoles(roleList);
-			adminUserRepository.save(admin);
+			adminUserService.create(admin);
+			initDefaultCompanydb();
 		}
 	}
 
@@ -67,7 +62,7 @@ public class AdminApplication implements CommandLineRunner{
 		defaultcdc.setPassword("root");
 		defaultcdc.setUsername("postgres");
 		defaultcdc.setHost("localhost");
-		defaultcdc.setDatabaseName("default_company");
+		defaultcdc.setDatabaseName("default_company_db");
 		defaultcdc.setPort("5432");
 		defaultcdc.setDatabaseType(DatabaseType.POSTGRESQL);
 		defaultcdc.setDriverClassName("org.postgresql.Driver");
@@ -83,29 +78,18 @@ public class AdminApplication implements CommandLineRunner{
 		company.setValidated(true);
 		company.setCompanyDataSourceConfig(defaultcdc);
 
-		companyService.create(company);
+		companyService.initializeAndSave(company);
 	}
 
 
-	@Bean
-	public BCryptPasswordEncoder passwordEncoder(){
-		return new BCryptPasswordEncoder();
-	}
 
-	public void setCompanyService(CompanyService companyService) {
-		this.companyService = companyService;
-	}
-
+	@Autowired
 	private CompanyService companyService;
-	private AdminUserRepository adminUserRepository;
+	@Autowired
+	private AdminUserService adminUserService;
+
+
+	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-	public void setAdminUserRepository(AdminUserRepository adminUserRepository) {
-		this.adminUserRepository = adminUserRepository;
-	}
-
-	public void setbCryptPasswordEncoder(BCryptPasswordEncoder bCryptPasswordEncoder) {
-		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-	}
 
 }

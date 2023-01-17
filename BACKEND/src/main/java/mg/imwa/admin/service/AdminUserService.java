@@ -21,7 +21,6 @@ import java.util.Optional;
 @Slf4j
 @Transactional(transactionManager = "adminTransactionManager")
 public class AdminUserService implements UserDetailsService,BasicServiceMethod<Admin>{
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
         Optional<Admin> byUserName = adminUserRepository.findByUserName(username);
@@ -30,7 +29,6 @@ public class AdminUserService implements UserDetailsService,BasicServiceMethod<A
             String userName = admin.getUserName();
             String password = admin.getPassword();
             Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-            admin.getRoles().forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getName())));
             return new User(userName,password,authorities);
         }
         return null;
@@ -63,6 +61,10 @@ public class AdminUserService implements UserDetailsService,BasicServiceMethod<A
         return null;
     }
 
+    public Optional<Admin> findByUserName(String username){
+        return adminUserRepository.findByUserName(username);
+    }
+
     @Override
     public List<Admin> findAll() {
         return null;
@@ -73,15 +75,10 @@ public class AdminUserService implements UserDetailsService,BasicServiceMethod<A
         return Optional.empty();
     }
 
-    public void setbCryptPasswordEncoder(BCryptPasswordEncoder bCryptPasswordEncoder) {
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-    }
-    public void setAdminUserRepository(AdminUserRepository adminUserRepository) {
-        this.adminUserRepository = adminUserRepository;
-    }
-
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
+    @Autowired
     private AdminUserRepository adminUserRepository;
 }

@@ -11,8 +11,7 @@ import java.io.Serializable;
 @Entity
 @Data
 @Slf4j
-public class CompanyDataSourceConfig implements Serializable {
-
+public class CompanyDataSourceConfig implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

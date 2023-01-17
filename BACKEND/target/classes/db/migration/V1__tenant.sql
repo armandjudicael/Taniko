@@ -1,815 +1,683 @@
--- we don't know how to generate root <with-no-name> (class Root) :(
-create table categorie
+create table if not exists public.categorie
 (
-    id bigserial not null
-        constraint categorie_pkey
-            primary key,
+    id      bigserial
+        primary key,
     libelle text
 );
-alter table categorie owner to postgres;
-create table article
+
+create table if not exists public.article
 (
-    article_id bigserial not null
-        constraint article_pkey
-            primary key,
-    designation text,
-    image oid,
+    article_id    bigserial
+        primary key,
+    designation   text,
+    image         oid,
     is_perishable boolean,
-    status varchar(15),
-    categorie_id bigint not null
+    status        varchar(15),
+    categorie_id  bigint not null
         constraint article_categorie_key_constraint
-            references categorie
-);
-alter table article owner to postgres;
-create table fonctionnalite
-(
-    id bigserial not null
-        constraint fonctionnalite_pkey
-            primary key,
-    nom text
-);
-alter table fonctionnalite owner to postgres;
-create table materiel_transport(
-    id bigserial not null
-        constraint materiel_transport_pkey
-            primary key,
-    reference text,
-    type_materiel text,
-    is_location boolean
-);
-alter table materiel_transport owner to postgres;
-create table personne
-(
-    id bigserial not null
-        constraint personne_pkey
-            primary key,
-    adresse text,
-    email text,
-    nom text,
-    num_tel text,
-    photo oid
+            references public.categorie
 );
 
-alter table personne owner to postgres;
-
-create table filiale
+create table if not exists public.fonction
 (
-    active boolean not null,
-    id bigint not null
-        constraint filiale_pkey
-            primary key
-        constraint fkf9jvt24bbipxisi457rl2hpl7
-            references personne
-);
-
-alter table filiale owner to postgres;
-
-create table client_fournisseur
-(
-    type integer not null,
-    id bigint not null
-        constraint client_fournisseur_pkey
-            primary key
-        constraint fkfofmm3l4qkmi4k9sl1nt2h3x0
-            references personne,
-    filiale_id bigint not null
-        constraint fk8gfv4wed4y8gg2y1hg5ot6s83
-            references filiale
-);
-alter table client_fournisseur owner to postgres;
-create table fonction
-(
-    id bigserial not null
-        constraint fonction_pkey
-            primary key,
+    id           bigserial
+        primary key,
     default_page integer,
     nom_fonction text
 );
-alter table fonction owner to postgres;
-create table fonction_autorisation
+
+create table if not exists public.fonctionnalite
 (
-    fonction_id bigint not null
+    id  bigserial
+        primary key,
+    nom text
+);
+
+create table if not exists public.fonction_autorisation
+(
+    fonction_id          bigint not null
         constraint fkq7n56ttiak9qet37qbka9tkmh
-            references fonction,
-    status bigint,
+            references public.fonction,
+    status               bigint,
     autorisation_map_key bigint not null
         constraint fkg488nhw14s1aldc3bydktadc2
-            references fonctionnalite,
-    constraint fonction_autorisation_pkey
-        primary key (fonction_id, autorisation_map_key)
+            references public.fonctionnalite,
+    primary key (fonction_id, autorisation_map_key)
 );
-alter table fonction_autorisation owner to postgres;
-create table inventory_alert
+
+create table if not exists public.materiel_transport
 (
-    article_id bigint not null
-        constraint fk_article_id
-            references article
-            on delete cascade,
-    filiale_id bigint not null
-        constraint fknscwajb2pg27h37thymgn90jt
-            references filiale,
-    quantite double precision,
-    constraint inventory_alert_pkey
-        primary key (article_id, filiale_id)
+    id            bigserial
+        primary key,
+    is_location   boolean,
+    reference     text,
+    type_materiel varchar(255)
 );
-alter table inventory_alert owner to postgres;
-create table magasin
+
+create table if not exists public.person
 (
-    id_magasin bigserial not null
-        constraint magasin_pkey
-            primary key,
+    id      bigserial
+        primary key,
     adresse text,
-    nom_magasin text,
-    filiale_id bigint
-        constraint magasin_filiale_key_constraint
-            references filiale
-);
-alter table magasin owner to postgres;
-create table personne_physique
-(
-    cin text,
-    date_delivrance date,
-    lieu_delivrance text,
-    sexe varchar(255),
-    situation_matrimoniale varchar(255),
-    id bigint not null
-        constraint personne_physique_pkey
-            primary key
-        constraint fkdntqhp735wc4j2lt9wd0es7gc
-            references personne,
-    fonction_id bigint
-        constraint user_fonction_key_constraint
-            references fonction
-);
-alter table personne_physique owner to postgres;
-create table _user
-(
-    enabled boolean,
-    password text,
-    username text,
-    id bigint not null
-        constraint _user_pkey
-            primary key
-        constraint fk378jh9bywdkcmkkcx2pujjplp
-            references personne_physique,
-    filiale_id bigint
-        constraint user_filiale_key_constraint
-            references filiale
+    email   text,
+    nom     text,
+    num_tel text,
+    photo   oid
 );
 
-alter table _user owner to postgres;
-
-create table info_filiale_caisse
+create table if not exists public.filiale
 (
-    id bigserial not null
-        constraint info_filiale_caisse_pkey
-            primary key,
-    date date,
-    description varchar(255),
+    active boolean not null,
+    id     bigint  not null
+        primary key
+        constraint fkhwcw0k2805bhh24ipfo7fhd5j
+            references public.person
+);
+
+create table if not exists public.caisse
+(
+    id            bigserial
+        primary key,
     mode_payement varchar(255),
-    montant_operation double precision,
-    operation_caisse varchar(255),
-    reference text,
-    filiale_id bigint
-        constraint fk216rqgw3u6o30dcr79curuhf5
-            references filiale,
-    user_id bigint
-        constraint fkt09390mitpvlwwkeeyv9h31d3
-            references _user
-);
-
-alter table info_filiale_caisse owner to postgres;
-
-create table info_caisse_magasin
-(
-    magasin_id_magasin bigint
-        constraint fkmc4yvtklffai4ffs2drjtudcr
-            references magasin,
-    id bigint not null
-        constraint info_caisse_magasin_pkey
-            primary key
-        constraint fkhei30itrdhm5xrgcavhpli0yg
-            references info_filiale_caisse
-);
-
-alter table info_caisse_magasin owner to postgres;
-
-create table personne_morale
-(
-    cif text,
-    nif text,
-    rcs text,
-    stat text,
-    id bigint not null
-        constraint personne_morale_pkey
-            primary key
-        constraint fkd0argsea72cd00cwspg44xv7c
-            references personne
-);
-
-alter table personne_morale owner to postgres;
-
-create table transfert
-(
-    id bigserial not null
-        constraint transfert_pkey
-            primary key,
-    chauffeur text,
-    magasin_dest_id bigint
-        constraint transfert_magasin_receveur_key_constraint
-            references magasin,
-    magasin_source_id bigint
-        constraint transfert_magasin_origine_key_constraint
-            references magasin
-);
-
-alter table transfert owner to postgres;
-
-create table transfert_article
-(
-    article_id bigint not null
-        constraint ta_article_key_constraint
-            references article,
-    transfert_id bigint not null
-        constraint ta_transfert_key_constraint
-            references transfert,
-    date timestamp,
-    quantite double precision,
-    constraint transfert_article_pkey
-        primary key (article_id, transfert_id)
-);
-
-alter table transfert_article owner to postgres;
-
-create table trosa
-(
-    id bigserial not null
-        constraint trosa_pkey
-            primary key,
-    date date,
-    date_echeance date,
-    description text,
-    mode_payement integer,
-    montant double precision,
-    reference text,
-    reste double precision,
-    type_trosa integer,
-    cf_id bigint
-        constraint fk39x2taxfbjx67kctge329f4qi
-            references client_fournisseur
-);
-
-alter table trosa owner to postgres;
-
-create table unite
-(
-    id bigserial not null
-        constraint unite_pkey
-            primary key,
-    code text,
-    designation text
-);
-
-alter table unite owner to postgres;
-
-create table article_unite
-(
-    id bigserial not null
-        constraint article_unite_pkey
-            primary key,
-    barcode varchar(255),
-    niveau integer not null,
-    poids double precision not null,
-    quantite_niveau double precision not null,
-    article_id bigint
-        constraint fk_article_id
-            references article
-            on delete cascade,
-    unite_id bigint
-        constraint fk_unite_id
-            references unite
-            on delete cascade
-);
-
-alter table article_unite owner to postgres;
-
-create table info_article_magasin
-(
-    id bigserial not null
-        constraint info_article_magasin_pkey
-            primary key,
-    date date,
-    description text,
-    montant_article double precision,
-    quantite_ajout double precision,
-    quantite_stock_apres_operation double precision,
-    reference text,
-    type_operation varchar(255),
-    article_id bigint
-        constraint fk_article_id
-            references article
-            on delete cascade,
-    magasin_id bigint
-        constraint fk_magasin_id
-            references magasin
-            on delete cascade,
-    unite_id bigint
-        constraint fk_unite_id
-            references unite
-            on delete cascade,
-    user_id bigint
-        constraint fkmq7t1rb4f0x9tvei5np310gv8
-            references _user
-);
-
-alter table info_article_magasin owner to postgres;
-
-create table approv
-(
-    id bigserial not null
-        constraint approv_pkey
-            primary key,
-    date_peremption date,
-    description text,
-    montant_approv double precision,
-    quantite_peremption double precision,
-    info_article_magasin_id bigint
-        constraint fkee9l9phtchq0t6ydgwvj94em7
-            references info_article_magasin
-);
-
-alter table approv owner to postgres;
-
-create table approvisionement_fournisseur(
-
-    fournisseur_id bigint
-        constraint fk7ek5k7lqe5ir888sy1dmvnhkr
-            references client_fournisseur,
-    id bigint not null
-        constraint approvisionement_fournisseur_pkey
-            primary key
-        constraint fkm4wotbvl3uojnskj2e8cm7s2f
-            references approv
-);
-
-alter table approvisionement_fournisseur owner to postgres;
-
-create table prix_article_filiale(
-
-    id bigserial not null
-        constraint prix_article_filiale_pkey
-            primary key,
-    date_enregistrement timestamp,
-    prix_vente double precision,
-    article_id bigint
-        constraint fk_article_id
-            references article
-            on delete cascade,
-    filiale_id bigint
-        constraint fk_filiale_id
-            references filiale
-            on delete cascade,
-    unite_id bigint
-        constraint fk_unite_id
-            references unite
-            on delete cascade,
-    user_id bigint
-        constraint fk_user_id
-            references _user
-);
-
-alter table prix_article_filiale owner to postgres;
-
-create table sortie
-(
-    id bigserial not null
-        constraint sortie_pkey
-            primary key,
-    info_article_magasin_id bigint
-        constraint fkc94a1h5i9rpp20hx5emeesscs
-            references info_article_magasin
-);
-
-alter table sortie owner to postgres;
-
-create table stock(
-
-    article_id bigint not null
-        constraint fk_stock_article_id
-            references article
-            on delete cascade,
-    magasin_id bigint not null
-        constraint fk_stock_magasin_id
-            references magasin
-            on delete cascade,
-    unite_id bigint not null
-        constraint fk_stock_unite_id
-            references unite
-            on delete cascade,
-    count double precision,
-    constraint stock_pkey
-        primary key (article_id, magasin_id, unite_id)
-);
-
-alter table stock owner to postgres;
-
-create table transfert_info
-(
-    transfert_id bigint not null
-        constraint fk6wo1relp2s61u7xtrih7vc2k8
-            references transfert,
-    info_article_magasin_list_id bigint not null
-        constraint uk_los6chfe359tfxa6bxjpa089h
-            unique
-        constraint fkcb76basile3u07xevpbq221g4
-            references info_article_magasin
-);
-
-alter table transfert_info owner to postgres;
-
-create table user_magasin
-(
-    user_id    bigint not null
-        constraint fk_um_user_id
-            references personne_physique,
-    magasin_id bigint not null
-        constraint fk_um_magasin_id
-            references magasin
-            on delete cascade
-);
-
-
-alter table user_magasin owner to postgres;
-
-create table vente(
-
-    id bigserial not null
-        constraint vente_pkey
-            primary key,
-    date date,
-    is_concerned_by_invoice_regulation boolean,
-    is_payement_mode_changed boolean,
-    montant_vente double precision,
-    ref_vente varchar(255),
-    remise double precision,
-    reste double precision,
-    client_id bigint
-        constraint fk_client_id
-            references client_fournisseur,
-    filiale_id bigint not null
-        constraint fkl1974he4065ewa9p14ygunqql
-            references filiale,
-    user_id bigint
-        constraint fkmrrjkylypib7vm3w0g7yagjpx
-            references _user,
-    date_vente date,
-    montant_avec_remise double precision
-);
-
-alter table vente owner to postgres;
-
-create table avoir
-(
-    id bigserial not null
-        constraint avoir_pkey
-            primary key,
-    date date,
-    montant double precision,
-    ref_avoir text,
-    info_id bigint
-        constraint fklxyeflsx4nsd24pu55b21983v
-            references info_filiale_caisse,
-    vente_id bigint
-        constraint avoir_vente_key_constraint
-            references vente
-);
-
-alter table avoir owner to postgres;
-
-create table avoir_info_article_magasin
-(
-    avoir_id bigint not null
-        constraint fknpq71662t998nxr6im4qumbel
-            references avoir,
-    info_article_magasin_id bigint not null
-        constraint uk_7rx02dwwnpsbg8cebsm2l5iox
-            unique
-        constraint fkt3ywq6qas4o4r8f5t8lajtjje
-            references info_article_magasin
-);
-
-alter table avoir_info_article_magasin owner to postgres;
-
-create table info_vente
-(
-    article_id bigint not null
-        constraint info_vente_article_key_constraint
-            references article,
-    vente_id bigint not null
-        constraint info_vente_vente_key_constraint
-            references vente,
-    date_vente timestamp,
-    prix_vente double precision,
-    quantite double precision,
-    reference varchar(255),
-    constraint info_vente_pkey
-        primary key (article_id, vente_id)
-);
-
-alter table info_vente owner to postgres;
-
-create table livraison
-(
-    id bigserial not null
-        constraint livraison_pkey
-            primary key,
-    numero_bon text,
-    statut_voyage varchar(255),
-    vente_id bigint
-        constraint livraison_vente_key_constraint
-            references vente
-);
-
-alter table livraison owner to postgres;
-
-create table livraison_materiel_transport
-(
-    mat_trans_id bigint
-        constraint fkbhshi8ku04cyvqncbo0mqv4mw
-            references materiel_transport,
-    livraison_id bigint not null
-        constraint livraison_materiel_transport_pkey
-            primary key
-        constraint fkhq0l73v1wwnhaehguiysr39dn
-            references livraison
-);
-
-alter table livraison_materiel_transport owner to postgres;
-
-create table vente_info_article_magasin
-(
-    vente_id bigint not null
-        constraint fkl3393ropsrxx0fpudinv40s52
-            references vente,
-    info_article_magasin_id bigint not null
-        constraint uk_1s5er6fxs8luu8hqefkoe5t34
-            unique
-        constraint fk73gflwri91ipwthq9qt64gqk6
-            references info_article_magasin
-);
-
-alter table vente_info_article_magasin owner to postgres;
-
-create table trajet
-(
-    id bigserial not null
-        constraint trajet_pkey
-            primary key,
-    depart varchar(255),
-    destination varchar(255),
-    distance double precision
-);
-
-alter table trajet owner to postgres;
-
-create table materiel_responsable
-(
-    personne_physique_id bigint
-        constraint fkt9fi1e25869ibbp7u3n2sqy8x
-            references personne_physique,
-    id bigint not null
-        constraint materiel_responsable_pkey
-            primary key
-        constraint fktfhtpg17bmdgm898b1bb3urnb
-            references materiel_transport,
-    responsable_id bigint
-        constraint fkk9nc1h9d4p50ffq0s07962hs7
-            references personne_physique
-);
-
-alter table materiel_responsable owner to postgres;
-
-create table voyage
-(
-    id bigserial not null
-        constraint voyage_pkey
-            primary key,
-    date_arrive date,
-    date_creation date,
-    date_depart date,
-    reference text,
-    statut_voyage integer,
-    materiel_de_transport_id bigint
-        constraint voyage_materiel_transport_key_contraint
-            references materiel_transport,
-    trajet_id bigint
-        constraint fkfkkl28of6k6b0yk0h7bh7aipc
-            references trajet,
-    description varchar(255)
-);
-
-alter table voyage owner to postgres;
-
-create table embarquement_article
-(
-    id bigserial not null
-        constraint embarquement_article_pkey
-            primary key,
-    date timestamp,
-    quantite double precision,
-    article_id bigint
-        constraint ea_article_key_constraint
-            references article,
-    user_id bigint
-        constraint voyage_responsable_key_constraint
-            references _user,
-    voyage_id bigint
-        constraint ea_voyage_key_constraint
-            references voyage
-);
-
-alter table embarquement_article owner to postgres;
-
-create table voyage_article_fournisseur
-(
-    fournisseur_id bigint
-        constraint fkliq46bnw1ol82h1dadl1hkjni
-            references client_fournisseur,
-    va_id bigint not null
-        constraint voyage_article_fournisseur_pkey
-            primary key
-        constraint fkeh2o7ims06p0l0ybatyxxxy83
-            references embarquement_article
-);
-
-alter table voyage_article_fournisseur owner to postgres;
-
-create table voyage_article_magasin
-(
-    magasin_id bigint
-        constraint fkm3q21a6hmx6usjxps4fwroy4t
-            references magasin,
-    va_id bigint not null
-        constraint voyage_article_magasin_pkey
-            primary key
-        constraint fkjyfq8ygywkh1w58u8v1jykkh4
-            references embarquement_article
-);
-
-alter table voyage_article_magasin owner to postgres;
-
-create table info_article_voyage
-(
-    id bigserial not null
-        constraint info_article_voyage_pkey
-            primary key,
-    date date,
-    description text,
-    is_transfered boolean,
-    num_facture varchar(255),
-    poids double precision,
-    prix_achat double precision,
-    prix_transport double precision,
-    prix_vente double precision,
-    quantite_ajout double precision,
-    reference varchar(255),
-    article_id bigint
-        constraint fk_article_id
-            references article
-            on delete cascade,
-    fournisseur_id bigint
-        constraint fko2fb7g8vsh5vocredoqcwyp4a
-            references client_fournisseur,
-    unite_id bigint
-        constraint fk_unite_id
-            references unite
-            on delete cascade,
-    user_id bigint
-        constraint fkiwkpeqnbvxaqo3qi5eppym45b
-            references _user,
-    voyage_id bigint
-        constraint fkqbiamwi8sfb5hw0hrtlxgl38j
-            references voyage,
-    date_peremption date,
-    materiel_transport_id bigint
-        constraint fkoe2hmnqy8rwcfelkjy6k0r6vc
-            references materiel_transport
-);
-
-alter table info_article_voyage owner to postgres;
-
-create table caisse
-(
-    id bigserial not null
-        constraint caisse_pkey
-            primary key,
-    value double precision,
-    filiale_id bigint
+    value         double precision,
+    filiale_id    bigint
         constraint fkfi0bmo3ltebryjb2qfu9v9ybq
-            references filiale,
-    mode_payement varchar(255)
+            references public.filiale
 );
 
-alter table caisse owner to postgres;
-
-create table peremption
+create table if not exists public.client_fournisseur
 (
-    id bigserial not null
-        constraint peremption_pkey
-            primary key,
-    date_peremption date,
-    quantite_peremption double precision,
-    article_id bigint
-        constraint fk_article_id
-            references article
-            on delete cascade,
-    magasin_id bigint
-        constraint fk_magasin_id
-            references magasin
-            on delete cascade,
-    unite_id bigint
-        constraint fk_unite_id
-            references unite
-            on delete cascade
+    type       integer not null,
+    id         bigint  not null
+        primary key
+        constraint fkb8wtu380s9rc417n0vdf9ijeo
+            references public.person,
+    filiale_id bigint  not null
+        constraint fk8gfv4wed4y8gg2y1hg5ot6s83
+            references public.filiale
 );
 
-alter table peremption owner to postgres;
-
-create table fonction_filiale
+create table if not exists public.fonction_filiale
 (
     filiale_id bigint
         constraint fkojblgjae933vkoi93xypxib4n
-            references filiale,
-    id bigint not null
-        constraint fonction_filiale_pkey
-            primary key
+            references public.filiale,
+    id         bigint not null
+        primary key
         constraint fkd2hew22h3qdb19pb51mp2fvby
-            references fonction
+            references public.fonction
 );
 
-alter table fonction_filiale owner to postgres;
-
-create table payement
+create table if not exists public.inventory_alert
 (
-    id bigserial not null
-        constraint payement_pkey
-            primary key,
-    date_payement date,
-    is_valid boolean,
-    mode_payement integer,
-    montant_payement double precision,
-    montant_restant double precision,
-    ifc_id bigint
-        constraint fkbvp9mp3pjymly51xyiubpata3
-            references info_filiale_caisse,
-    user_id bigint
-        constraint fkq88evq9tx2p13ss7va4bhlu20
-            references _user
+    article_id bigint not null
+        constraint fk_article_id
+            references public.article
+            on delete cascade,
+    filiale_id bigint not null
+        constraint fknscwajb2pg27h37thymgn90jt
+            references public.filiale,
+    quantite   double precision,
+    primary key (article_id, filiale_id)
 );
 
-alter table payement owner to postgres;
+create table if not exists public.magasin
+(
+    id_magasin  bigserial
+        primary key,
+    adresse     text,
+    nom_magasin text,
+    filiale_id  bigint
+        constraint magasin_filiale_key_constraint
+            references public.filiale
+);
 
-create table payement_trosa
+create table if not exists public.person_morale
+(
+    cif  text,
+    nif  text,
+    rcs  text,
+    stat text,
+    id   bigint not null
+        primary key
+        constraint fkkpahk86li2icc3so6pcmf40h
+            references public.person
+);
+
+create table if not exists public.personne_physique
+(
+    cin                    text,
+    date_delivrance        date,
+    lieu_delivrance        text,
+    sexe                   varchar(255),
+    situation_matrimoniale varchar(255),
+    id                     bigint not null
+        primary key
+        constraint fk1wt7xn3y93ecfo331ahvo2ird
+            references public.person,
+    fonction_id            bigint
+        constraint user_fonction_key_constraint
+            references public.fonction
+);
+
+create table if not exists public._user
+(
+    enabled    boolean,
+    password   text,
+    username   text,
+    id         bigint not null
+        primary key
+        constraint fk378jh9bywdkcmkkcx2pujjplp
+            references public.personne_physique,
+    filiale_id bigint
+        constraint user_filiale_key_constraint
+            references public.filiale
+);
+
+create table if not exists public.info_filiale_caisse
+(
+    id                bigserial
+        primary key,
+    date              date,
+    description       varchar(255),
+    mode_payement     varchar(255),
+    montant_operation double precision,
+    operation_caisse  varchar(255),
+    reference         text,
+    filiale_id        bigint
+        constraint fk216rqgw3u6o30dcr79curuhf5
+            references public.filiale,
+    user_id           bigint
+        constraint fkt09390mitpvlwwkeeyv9h31d3
+            references public._user
+);
+
+create table if not exists public.info_caisse_magasin
+(
+    magasin_id_magasin bigint
+        constraint fkmc4yvtklffai4ffs2drjtudcr
+            references public.magasin,
+    id                 bigint not null
+        primary key
+        constraint fkhei30itrdhm5xrgcavhpli0yg
+            references public.info_filiale_caisse
+);
+
+create table if not exists public.materiel_responsable
+(
+    responsable_id bigint
+        constraint fkk9nc1h9d4p50ffq0s07962hs7
+            references public.personne_physique,
+    id             bigint not null
+        primary key
+        constraint fktfhtpg17bmdgm898b1bb3urnb
+            references public.materiel_transport
+);
+
+create table if not exists public.payement
+(
+    id               bigserial
+        primary key,
+    date_payement    date,
+    is_valid         boolean,
+    mode_payement    integer,
+    montant_payement double precision,
+    montant_restant  double precision,
+    ifc_id           bigint
+        constraint fkbvp9mp3pjymly51xyiubpata3
+            references public.info_filiale_caisse,
+    user_id          bigint
+        constraint fkq88evq9tx2p13ss7va4bhlu20
+            references public._user
+);
+
+create table if not exists public.trajet
+(
+    id          bigserial
+        primary key,
+    depart      varchar(255),
+    destination varchar(255),
+    distance    double precision
+);
+
+create table if not exists public.transfert
+(
+    id                bigserial
+        primary key,
+    chauffeur         text,
+    magasin_dest_id   bigint
+        constraint transfert_magasin_receveur_key_constraint
+            references public.magasin,
+    magasin_source_id bigint
+        constraint transfert_magasin_origine_key_constraint
+            references public.magasin
+);
+
+create table if not exists public.transfert_article
+(
+    article_id   bigint not null
+        constraint ta_article_key_constraint
+            references public.article,
+    transfert_id bigint not null
+        constraint ta_transfert_key_constraint
+            references public.transfert,
+    date         timestamp,
+    quantite     double precision,
+    primary key (article_id, transfert_id)
+);
+
+create table if not exists public.trosa
+(
+    id            bigserial
+        primary key,
+    date          date,
+    date_echeance date,
+    description   text,
+    mode_payement integer,
+    montant       double precision,
+    reference     text,
+    reste         double precision,
+    type_trosa    integer,
+    cf_id         bigint
+        constraint fk39x2taxfbjx67kctge329f4qi
+            references public.client_fournisseur
+);
+
+create table if not exists public.payement_trosa
 (
     trosa_id bigint
         constraint fkb2526f59dc0c9oml61dam6ye9
-            references trosa,
-    id bigint not null
-        constraint payement_trosa_pkey
-            primary key
+            references public.trosa,
+    id       bigint not null
+        primary key
         constraint fk5u3q6yc86k8foce909bd28f2n
-            references payement
+            references public.payement
 );
 
-alter table payement_trosa owner to postgres;
-
-create table payement_vente
+create table if not exists public.trosa_payements
 (
-    vente_id bigint
-        constraint fkbvl3nwk74cdeunyr28343tfmp
-            references vente,
-    id bigint not null
-        constraint payement_vente_pkey
-            primary key
-        constraint fkja4c97ku8ehkk3efiny6d88h4
-            references payement
-);
-
-alter table payement_vente owner to postgres;
-
-create table trosa_payements
-(
-    trosa_id bigint not null
+    trosa_id     bigint not null
         constraint fk5tvd0q6owdj5oeevkwwoqr3jh
-            references trosa,
+            references public.trosa,
     payements_id bigint not null
         constraint uk_bi7hj23qmxw0uy3vfawi9gs8u
             unique
         constraint fk5a1fb6pi4ltlfj9q468f9mexc
-            references payement
+            references public.payement
 );
 
-alter table trosa_payements owner to postgres;
+create table if not exists public.unite
+(
+    id          bigserial
+        primary key,
+    code        text,
+    designation text
+);
+
+create table if not exists public.article_unite
+(
+    id              bigserial
+        primary key,
+    barcode         varchar(255),
+    niveau          integer          not null,
+    poids           double precision not null,
+    quantite_niveau double precision not null,
+    article_id      bigint
+        constraint fk_article_id
+            references public.article
+            on delete cascade,
+    unite_id        bigint
+        constraint fk_unite_id
+            references public.unite
+            on delete cascade
+);
+
+create table if not exists public.info_article_magasin
+(
+    id                             bigserial
+        primary key,
+    date                           date,
+    description                    text,
+    montant_article                double precision,
+    quantite_ajout                 double precision,
+    quantite_stock_apres_operation double precision,
+    reference                      text,
+    type_operation                 varchar(255),
+    article_id                     bigint
+        constraint fk_article_id
+            references public.article
+            on delete cascade,
+    magasin_id                     bigint
+        constraint fk_magasin_id
+            references public.magasin
+            on delete cascade,
+    unite_id                       bigint
+        constraint fk_unite_id
+            references public.unite
+            on delete cascade,
+    user_id                        bigint
+        constraint fkmq7t1rb4f0x9tvei5np310gv8
+            references public._user
+);
+
+create table if not exists public.approv
+(
+    id                      bigserial
+        primary key,
+    date_peremption         date,
+    description             text,
+    montant_approv          double precision,
+    quantite_peremption     double precision,
+    info_article_magasin_id bigint
+        constraint fkee9l9phtchq0t6ydgwvj94em7
+            references public.info_article_magasin
+);
+
+create table if not exists public.approvisionement_fournisseur
+(
+    fournisseur_id bigint
+        constraint fk7ek5k7lqe5ir888sy1dmvnhkr
+            references public.client_fournisseur,
+    id             bigint not null
+        primary key
+        constraint fkm4wotbvl3uojnskj2e8cm7s2f
+            references public.approv
+);
+
+create table if not exists public.peremption
+(
+    id                  bigserial
+        primary key,
+    date_peremption     date,
+    quantite_peremption double precision,
+    article_id          bigint
+        constraint fk_article_id
+            references public.article
+            on delete cascade,
+    magasin_id          bigint
+        constraint fk_magasin_id
+            references public.magasin
+            on delete cascade,
+    unite_id            bigint
+        constraint fk_unite_id
+            references public.unite
+            on delete cascade
+);
+
+create table if not exists public.prix_article_filiale
+(
+    id                  bigserial
+        primary key,
+    date_enregistrement timestamp,
+    prix_vente          double precision,
+    article_id          bigint
+        constraint fk_article_id
+            references public.article
+            on delete cascade,
+    filiale_id          bigint
+        constraint fk_filiale_id
+            references public.filiale
+            on delete cascade,
+    unite_id            bigint
+        constraint fk_unite_id
+            references public.unite
+            on delete cascade,
+    user_id             bigint
+        constraint fk_user_id
+            references public._user
+);
+
+create table if not exists public.sortie
+(
+    id                      bigserial
+        primary key,
+    info_article_magasin_id bigint
+        constraint fkc94a1h5i9rpp20hx5emeesscs
+            references public.info_article_magasin
+);
+
+create table if not exists public.stock
+(
+    article_id bigint not null
+        constraint fk_stock_article_id
+            references public.article
+            on delete cascade,
+    magasin_id bigint not null
+        constraint fk_stock_magasin_id
+            references public.magasin
+            on delete cascade,
+    unite_id   bigint not null
+        constraint fk_stock_unite_id
+            references public.unite
+            on delete cascade,
+    count      double precision,
+    primary key (article_id, magasin_id, unite_id)
+);
+
+create table if not exists public.transfert_info
+(
+    transfert_id                 bigint not null
+        constraint fk6wo1relp2s61u7xtrih7vc2k8
+            references public.transfert,
+    info_article_magasin_list_id bigint not null
+        constraint uk_los6chfe359tfxa6bxjpa089h
+            unique
+        constraint fkcb76basile3u07xevpbq221g4
+            references public.info_article_magasin
+);
+
+create table if not exists public.user_magasin
+(
+    user_id    bigint not null
+        constraint fk_um_user_id
+            references public.personne_physique,
+    magasin_id bigint not null
+        constraint fk_um_magasin_id
+            references public.magasin
+            on delete cascade
+);
+
+create table if not exists public.vente
+(
+    id                                 bigserial
+        primary key,
+    date                               date,
+    is_concerned_by_invoice_regulation boolean,
+    is_payement_mode_changed           boolean,
+    montant_avec_remise                double precision,
+    montant_vente                      double precision,
+    ref_vente                          varchar(255),
+    client_id                          bigint
+        constraint fk_client_id
+            references public.client_fournisseur,
+    filiale_id                         bigint not null
+        constraint fkl1974he4065ewa9p14ygunqql
+            references public.filiale,
+    user_id                            bigint
+        constraint fkmrrjkylypib7vm3w0g7yagjpx
+            references public._user
+);
+
+create table if not exists public.avoir
+(
+    id        bigserial
+        primary key,
+    date      date,
+    montant   double precision,
+    ref_avoir text,
+    info_id   bigint
+        constraint fklxyeflsx4nsd24pu55b21983v
+            references public.info_filiale_caisse,
+    vente_id  bigint
+        constraint avoir_vente_key_constraint
+            references public.vente
+);
+
+create table if not exists public.avoir_info_article_magasin
+(
+    avoir_id                bigint not null
+        constraint fknpq71662t998nxr6im4qumbel
+            references public.avoir,
+    info_article_magasin_id bigint not null
+        constraint uk_7rx02dwwnpsbg8cebsm2l5iox
+            unique
+        constraint fkt3ywq6qas4o4r8f5t8lajtjje
+            references public.info_article_magasin
+);
+
+create table if not exists public.info_vente
+(
+    article_id bigint not null
+        constraint info_vente_article_key_constraint
+            references public.article,
+    vente_id   bigint not null
+        constraint info_vente_vente_key_constraint
+            references public.vente,
+    date_vente timestamp,
+    prix_vente double precision,
+    quantite   double precision,
+    reference  varchar(255),
+    primary key (article_id, vente_id)
+);
+
+create table if not exists public.livraison
+(
+    id            bigserial
+        primary key,
+    numero_bon    text,
+    statut_voyage varchar(255),
+    vente_id      bigint
+        constraint livraison_vente_key_constraint
+            references public.vente
+);
+
+create table if not exists public.livraison_materiel_transport
+(
+    mat_trans_id bigint
+        constraint fkbhshi8ku04cyvqncbo0mqv4mw
+            references public.materiel_transport,
+    livraison_id bigint not null
+        primary key
+        constraint fkhq0l73v1wwnhaehguiysr39dn
+            references public.livraison
+);
+
+create table if not exists public.payement_vente
+(
+    vente_id bigint
+        constraint fkbvl3nwk74cdeunyr28343tfmp
+            references public.vente,
+    id       bigint not null
+        primary key
+        constraint fkja4c97ku8ehkk3efiny6d88h4
+            references public.payement
+);
+
+create table if not exists public.vente_info_article_magasin
+(
+    vente_id                bigint not null
+        constraint fkl3393ropsrxx0fpudinv40s52
+            references public.vente,
+    info_article_magasin_id bigint not null
+        constraint uk_1s5er6fxs8luu8hqefkoe5t34
+            unique
+        constraint fk73gflwri91ipwthq9qt64gqk6
+            references public.info_article_magasin
+);
+
+create table if not exists public.voyage
+(
+    id                       bigserial
+        primary key,
+    date_arrive              date,
+    date_creation            date,
+    date_depart              date,
+    description              varchar(255),
+    reference                text,
+    statut_voyage            integer,
+    materiel_de_transport_id bigint
+        constraint voyage_materiel_transport_key_contraint
+            references public.materiel_transport,
+    trajet_id                bigint
+        constraint fkfkkl28of6k6b0yk0h7bh7aipc
+            references public.trajet
+);
+
+create table if not exists public.embarquement_article
+(
+    id         bigserial
+        primary key,
+    date       timestamp,
+    quantite   double precision,
+    article_id bigint
+        constraint ea_article_key_constraint
+            references public.article,
+    user_id    bigint
+        constraint voyage_responsable_key_constraint
+            references public._user,
+    voyage_id  bigint
+        constraint ea_voyage_key_constraint
+            references public.voyage
+);
+
+create table if not exists public.info_article_voyage
+(
+    id                    bigserial
+        primary key,
+    date                  date,
+    date_peremption       date,
+    description           text,
+    is_transfered         boolean,
+    num_facture           varchar(255),
+    poids                 double precision,
+    prix_achat            double precision,
+    prix_transport        double precision,
+    prix_vente            double precision,
+    quantite_ajout        double precision,
+    reference             varchar(255),
+    article_id            bigint
+        constraint fk_article_id
+            references public.article
+            on delete cascade,
+    fournisseur_id        bigint
+        constraint fko2fb7g8vsh5vocredoqcwyp4a
+            references public.client_fournisseur,
+    materiel_transport_id bigint
+        constraint fkoe2hmnqy8rwcfelkjy6k0r6vc
+            references public.materiel_transport,
+    unite_id              bigint
+        constraint fk_unite_id
+            references public.unite
+            on delete cascade,
+    user_id               bigint
+        constraint fkiwkpeqnbvxaqo3qi5eppym45b
+            references public._user,
+    voyage_id             bigint
+        constraint fkqbiamwi8sfb5hw0hrtlxgl38j
+            references public.voyage
+);
+
+create table if not exists public.voyage_article_fournisseur
+(
+    fournisseur_id bigint
+        constraint fkliq46bnw1ol82h1dadl1hkjni
+            references public.client_fournisseur,
+    va_id          bigint not null
+        primary key
+        constraint fkeh2o7ims06p0l0ybatyxxxy83
+            references public.embarquement_article
+);
+
+create table if not exists public.voyage_article_magasin
+(
+    magasin_id bigint
+        constraint fkm3q21a6hmx6usjxps4fwroy4t
+            references public.magasin,
+    va_id      bigint not null
+        primary key
+        constraint fkjyfq8ygywkh1w58u8v1jykkh4
+            references public.embarquement_article
+);
 
 create procedure mettre_a_jour_date_peremption(IN id_magasin bigint, IN id_article bigint, IN id_unite bigint, IN new_date timestamp without time zone, IN old_date timestamp without time zone)
     language plpgsql

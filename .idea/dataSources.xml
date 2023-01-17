@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/admin_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="DEFAULT_COMPANY" uuid="5fff3a5a-f221-49fe-85d1-a8d6a650794b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/default_company_db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

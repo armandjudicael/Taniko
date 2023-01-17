@@ -2,8 +2,10 @@ package mg.imwa.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
@@ -21,5 +23,11 @@ public class AsyncConfig{
         executor.setThreadNamePrefix(" dynamic-db-creation-thread ");
         executor.initialize();
         return executor;
+    }
+
+    @Bean
+    @Primary
+    public BCryptPasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 }

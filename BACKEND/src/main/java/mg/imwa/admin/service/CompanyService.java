@@ -1,5 +1,4 @@
 package mg.imwa.admin.service;
-
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Entity.Company;
@@ -11,10 +10,10 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.output.MigrateResult;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.sql.*;
 import java.util.List;
 import java.util.Objects;
@@ -29,16 +28,27 @@ public class CompanyService implements BasicServiceMethod<Company> {
     @Override
     public Company create(Company company){
         String dbName = company.getCompanyDataSourceConfig().getDatabaseName();
-        if(databaseDontExistOnPgServer(dbName)){
+        if(databaseDontExistOnPgServer(dbName) && databaseDontExist(dbName)){
                 try {
                     executeNativeQuery("CREATE DATABASE "+dbName+";");
-                } catch (SQLException e) {
+                } catch (SQLException e){
                     throw new RuntimeException(e);
                 }
                 return null;
         }
+        return initializeAndSave(company);
+    }
+
+    public Company initializeAndSave(Company company){
         CompanyDataSourceConfig cdc = company.getCompanyDataSourceConfig();
         HikariDataSource hikariDataSource = cdc.initDatasource();
+        executeFlywayMigration(hikariDataSource);
+        String validationKey = generateValidationKey(company.getNom());
+        company.setValidationKey(validationKey);
+        return companyRepository.save(company);
+    }
+
+    public Company initializeAndSave(Company company,HikariDataSource hikariDataSource) {
         executeFlywayMigration(hikariDataSource);
         String validationKey = generateValidationKey(company.getNom());
         company.setValidationKey(validationKey);
@@ -49,9 +59,6 @@ public class CompanyService implements BasicServiceMethod<Company> {
     public Company updateById(Long id) {
         return null;
     }
-
-
-
     @Override
     public Boolean deleteById(Long id) {
         Optional<Company> byId = companyRepository.findById(id);
@@ -124,9 +131,9 @@ public class CompanyService implements BasicServiceMethod<Company> {
         }
     }
     public static void executeFlywayMigration(HikariDataSource dataSource){
-        Flyway flyway = Flyway.configure().dataSource(dataSource).load();
-        MigrateResult migrate = flyway.migrate();
-        dataSource.close();
+            Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+            MigrateResult migrate = flyway.migrate();
+            dataSource.close();
     }
     private void executeNativeQuery(String query) throws SQLException {
         Connection connection = Objects.requireNonNull(entityManagerFactory.getDataSource()).getConnection();
@@ -138,22 +145,14 @@ public class CompanyService implements BasicServiceMethod<Company> {
     private Boolean databaseDontExistOnPgServer(String dbname){
         return companyRepository.databaseDontExistOnPgServer(dbname)==0;
     }
-    public void setCompanyRepository(CompanyRepository companyRepository) {
-        this.companyRepository = companyRepository;
-    }
-    public void setCompanyDatasourceConfigRepo(CompanyDatasourceConfigRepo companyDatasourceConfigRepo) {
-        this.companyDatasourceConfigRepo = companyDatasourceConfigRepo;
-    }
-    public void setEntityManagerFactory(LocalContainerEntityManagerFactoryBean entityManagerFactory) {
-        this.entityManagerFactory = entityManagerFactory;
-    }
-    public void setMapMultiTenantConnectionProvider(MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider) {
-        this.mapMultiTenantConnectionProvider = mapMultiTenantConnectionProvider;
-    }
     //private EmailService emailService;
+    @Autowired
     private CompanyRepository companyRepository;
+    @Autowired
     private CompanyDatasourceConfigRepo companyDatasourceConfigRepo;
+    @Autowired
     private LocalContainerEntityManagerFactoryBean entityManagerFactory;
+    @Autowired
     private MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider;
 
 }
