@@ -1,12 +1,9 @@
 package mg.imwa.admin.model.Entity;
-
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-
 @Entity
 @Data
 public class Filiale implements Serializable {

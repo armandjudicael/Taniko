@@ -12,7 +12,6 @@ import java.util.Map;
 public class CashWrapper {
     private List<InfoFilialeCaisse> infoCaisseList;
     private Map<String, Double> dashboardInfoMap;
-
     public CashWrapper(List<InfoFilialeCaisse> infoCaisseList) {
         this.infoCaisseList = infoCaisseList;
     }

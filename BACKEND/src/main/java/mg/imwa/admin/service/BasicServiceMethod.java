@@ -14,6 +14,6 @@ public interface BasicServiceMethod<T> {
    Boolean delete(T obejct);
    List<T> findAll();
 
-   Optional<T> findById(Long id);
+   T findById(Long id);
 
 }

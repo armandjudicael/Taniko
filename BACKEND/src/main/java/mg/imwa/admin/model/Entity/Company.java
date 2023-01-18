@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.tenant.model.tenantEntityBeans.Person;
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.List;
 
 @Data
@@ -26,6 +27,7 @@ public class Company extends Person {
     @OneToOne(cascade = CascadeType.PERSIST)
     private TenantUser admin;
     private boolean isValidated = true;
+
     @Override
     public String toString(){
         return "Company{" +
@@ -38,4 +40,5 @@ public class Company extends Person {
                 ", isValidated=" + isValidated +
                 '}';
     }
+
 }

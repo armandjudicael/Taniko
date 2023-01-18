@@ -25,7 +25,6 @@ public class CompanyDataSourceConfig implements Serializable{
     private DatabaseType databaseType;
 
     private String databaseName;
-
     @Transient
     @JsonIgnore
     public HikariDataSource initDatasource(){

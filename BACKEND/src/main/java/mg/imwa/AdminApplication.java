@@ -1,24 +1,22 @@
 package mg.imwa;
-import com.zaxxer.hikari.HikariDataSource;
 import mg.imwa.admin.model.Entity.*;
 import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.admin.model.Enum.DatabaseType;
 import mg.imwa.admin.model.Enum.UserType;
-import mg.imwa.admin.service.AdminUserService;
+import mg.imwa.admin.service.MainUserService;
 import mg.imwa.admin.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Optional;
 
 @SpringBootApplication(scanBasePackages ={
-		"mg.imwa.config",
+		"mg.imwa.config.dbConfig",
+		"mg.imwa.config.securityConfig",
 
 		"mg.imwa.admin.model",
 		"mg.imwa.admin.repository",
@@ -37,15 +35,15 @@ public class AdminApplication implements CommandLineRunner{
 	@Override public void run(String... args) throws Exception{
 		initErp();
 	}
-
 	private void initErp(){
 		String adminUsername = "armand_judicael";
-		Optional<Admin> byUserName = adminUserService.findByUserName(adminUsername);
+		Optional<Admin> byUserName = mainUserService.findByUserName(adminUsername);
 		if (byUserName.isEmpty()){
 			Admin admin = new Admin();
 			admin.setUserName(adminUsername);
 			admin.setPassword("Aj!30071999");
-			adminUserService.create(admin);
+			admin.setUserType(UserType.ERP_ADMIN);
+			mainUserService.create(admin);
 			initDefaultCompanydb();
 		}
 	}
@@ -53,8 +51,8 @@ public class AdminApplication implements CommandLineRunner{
 	private void initDefaultCompanydb(){
 
 		TenantUser defaultDbAdmin = new TenantUser();
-		defaultDbAdmin.setUserName(bCryptPasswordEncoder.encode("nirina"));
-		defaultDbAdmin.setPassword(bCryptPasswordEncoder.encode("nirina"));
+		defaultDbAdmin.setUserName("nirina");
+		defaultDbAdmin.setPassword("nirina");
 		defaultDbAdmin.setKey("default_company_db");
 		defaultDbAdmin.setUserType(UserType.COMPANY_ADMIN);
 
@@ -80,16 +78,9 @@ public class AdminApplication implements CommandLineRunner{
 
 		companyService.initializeAndSave(company);
 	}
-
-
-
 	@Autowired
 	private CompanyService companyService;
 	@Autowired
-	private AdminUserService adminUserService;
-
-
-	@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	private MainUserService mainUserService;
 
 }

@@ -3,7 +3,7 @@ package mg.imwa.tenant.controller.restController;
 import mg.imwa.admin.model.Entity.TenantUser;
 import mg.imwa.admin.model.Enum.UserType;
 import mg.imwa.admin.repository.TenantUserRepository;
-import mg.imwa.config.TenantContext;
+import mg.imwa.config.dbConfig.TenantContext;
 import mg.imwa.tenant.model.tenantEntityBeans.Magasin;
 import mg.imwa.tenant.model.tenantEntityBeans.User;
 import mg.imwa.tenant.repository.FonctionRepository;

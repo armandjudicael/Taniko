@@ -1,4 +1,4 @@
-package mg.imwa.config;
+package mg.imwa.config.dbConfig;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

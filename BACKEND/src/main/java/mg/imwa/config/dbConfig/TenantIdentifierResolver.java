@@ -1,4 +1,4 @@
-package mg.imwa.config;
+package mg.imwa.config.dbConfig;
 import org.hibernate.context.spi.CurrentTenantIdentifierResolver;
 import org.springframework.stereotype.Component;
 

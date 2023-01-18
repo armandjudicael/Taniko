@@ -1,4 +1,4 @@
-package mg.imwa.config;
+package mg.imwa.config.dbConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.hibernate.MultiTenancyStrategy;
 import org.hibernate.cfg.Environment;

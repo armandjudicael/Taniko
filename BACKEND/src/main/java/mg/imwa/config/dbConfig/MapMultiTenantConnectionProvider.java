@@ -1,4 +1,4 @@
-package mg.imwa.config;
+package mg.imwa.config.dbConfig;
 import org.hibernate.engine.jdbc.connections.spi.AbstractMultiTenantConnectionProvider;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.springframework.stereotype.Component;

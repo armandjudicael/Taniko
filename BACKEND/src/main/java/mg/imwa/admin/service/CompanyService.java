@@ -5,7 +5,7 @@ import mg.imwa.admin.model.Entity.Company;
 import mg.imwa.admin.model.Entity.CompanyDataSourceConfig;
 import mg.imwa.admin.repository.CompanyDatasourceConfigRepo;
 import mg.imwa.admin.repository.CompanyRepository;
-import mg.imwa.config.MapMultiTenantConnectionProvider;
+import mg.imwa.config.dbConfig.MapMultiTenantConnectionProvider;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.output.MigrateResult;
@@ -103,8 +103,8 @@ public class CompanyService implements BasicServiceMethod<Company> {
     }
 
     @Override
-    public Optional<Company> findById(Long id) {
-        return companyRepository.findById(id);
+    public Company findById(Long id) {
+        return companyRepository.findById(id).get();
     }
     @Override
     public Company update(Company company,Long id){

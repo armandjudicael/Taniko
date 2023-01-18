@@ -20,15 +20,17 @@ import java.util.Optional;
 @Service
 @Slf4j
 @Transactional(transactionManager = "adminTransactionManager")
-public class AdminUserService implements UserDetailsService,BasicServiceMethod<Admin>{
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+public class MainUserService implements UserDetailsService,BasicServiceMethod<Admin>{
+
+    @Override public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+        log.info("  LOAD USER WITH THE USERNAME  "+username);
         Optional<Admin> byUserName = adminUserRepository.findByUserName(username);
         if (byUserName.isPresent()){
             Admin admin = byUserName.get();
             String userName = admin.getUserName();
             String password = admin.getPassword();
             Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
+            authorities.add(new SimpleGrantedAuthority(admin.getUserType().name()));
             return new User(userName,password,authorities);
         }
         return null;
@@ -36,8 +38,6 @@ public class AdminUserService implements UserDetailsService,BasicServiceMethod<A
 
     @Override
     public Admin create(Admin object) {
-        object.setPassword(bCryptPasswordEncoder.encode(object.getPassword()));
-        object.setUserName(bCryptPasswordEncoder.encode(object.getUserName()));
         return adminUserRepository.save(object);
     }
 
@@ -48,36 +48,37 @@ public class AdminUserService implements UserDetailsService,BasicServiceMethod<A
 
     @Override
     public Admin update(Admin object,Long id){
-        return null;
+        Optional<Admin> byId = adminUserRepository.findById(id);
+        if (byId.isPresent()){
+            object.setId(id);
+           return adminUserRepository.save(object);
+        }
+        return object;
     }
 
     @Override
-    public Boolean deleteById(Long id) {
-        return null;
+    public Boolean deleteById(Long id){
+        adminUserRepository.deleteById(id);
+        return true;
     }
 
     @Override
     public Boolean delete(Admin obejct) {
-        return null;
+        adminUserRepository.delete(obejct);
+        return true;
     }
-
     public Optional<Admin> findByUserName(String username){
         return adminUserRepository.findByUserName(username);
     }
-
     @Override
-    public List<Admin> findAll() {
-        return null;
+    public List<Admin> findAll(){
+        return adminUserRepository.findAll();
     }
-
     @Override
-    public Optional<Admin> findById(Long id) {
-        return Optional.empty();
+    public Admin findById(Long id) {
+        Admin admin = adminUserRepository.findById(id).get();
+        return admin;
     }
-
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
 
     @Autowired
     private AdminUserRepository adminUserRepository;

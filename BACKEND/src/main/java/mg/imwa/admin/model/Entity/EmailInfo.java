@@ -1,10 +1,7 @@
 package mg.imwa.admin.model.Entity;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import java.io.Serializable;
-
 @AllArgsConstructor
 @Data
 public class EmailInfo implements Serializable {
