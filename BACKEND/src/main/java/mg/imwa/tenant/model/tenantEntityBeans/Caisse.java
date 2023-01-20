@@ -3,7 +3,7 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.Data;
 import mg.imwa.tenant.model.entityEnum.ModePayement;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Data

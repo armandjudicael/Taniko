@@ -14,7 +14,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.sql.DataSource;
 import java.util.HashMap;
 
 @Configuration
@@ -47,9 +46,6 @@ public class AdminConfig{
     public LocalContainerEntityManagerFactoryBean memberEntityManagerFactory(){
         HashMap<String, Object> jpaPropertiesMap = new HashMap<>();
         jpaPropertiesMap.put("hibernate.dialect","org.hibernate.dialect.PostgreSQLDialect");
-        jpaPropertiesMap.put("hibernate.physical_naming_strategy",
-                "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
-        jpaPropertiesMap.put("hibernate.implicit_naming_strategy","org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
         jpaPropertiesMap.put("hibernate.hbm2ddl.auto", "update");
         jpaPropertiesMap.put("hibernate.show_sql","true");
         jpaPropertiesMap.put("hibernate.enable_lazy_load_no_trans","true");

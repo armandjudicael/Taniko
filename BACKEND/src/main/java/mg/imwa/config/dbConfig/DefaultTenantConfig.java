@@ -1,6 +1,5 @@
 package mg.imwa.config.dbConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.hibernate.MultiTenancyStrategy;
 import org.hibernate.cfg.Environment;
 import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -76,13 +75,10 @@ public class DefaultTenantConfig{
         em.setJpaVendorAdapter(vendorAdapter);
         HashMap<String, Object> jpaPropertiesMap = new HashMap<>();
         jpaPropertiesMap.put("hibernate.dialect","org.hibernate.dialect.PostgreSQLDialect");
-        jpaPropertiesMap.put("hibernate.physical_naming_strategy",
-                "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
-        jpaPropertiesMap.put("hibernate.implicit_naming_strategy","org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy");
         jpaPropertiesMap.put("hibernate.hbm2ddl.auto","drop");
         jpaPropertiesMap.put("hibernate.show_sql","true");
         jpaPropertiesMap.put("hibernate.enable_lazy_load_no_trans","true");
-        jpaPropertiesMap.put(Environment.MULTI_TENANT,MultiTenancyStrategy.DATABASE);
+        jpaPropertiesMap.put("hibernate.search.backend.multi_tenancy.strategy","database");
         jpaPropertiesMap.put(Environment.MULTI_TENANT_CONNECTION_PROVIDER,multiTenantConnectionProvider);
         jpaPropertiesMap.put(Environment.MULTI_TENANT_IDENTIFIER_RESOLVER,tenantIdentifierResolver);
         em.setJpaPropertyMap(jpaPropertiesMap);

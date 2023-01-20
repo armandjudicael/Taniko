@@ -5,7 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.UserType;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 @Getter
 @Setter

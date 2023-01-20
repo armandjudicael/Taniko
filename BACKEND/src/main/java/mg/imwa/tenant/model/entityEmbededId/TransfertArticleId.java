@@ -2,7 +2,7 @@ package mg.imwa.tenant.model.entityEmbededId;
 
 import lombok.Data;
 
-import javax.persistence.Embeddable;
+import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable

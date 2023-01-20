@@ -6,7 +6,7 @@ import mg.imwa.tenant.model.entityEmbededId.TransfertArticleId;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity(name = "transfertArticle")

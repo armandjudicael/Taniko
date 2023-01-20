@@ -3,7 +3,7 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,10 +11,6 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Table(name = "_user")
-@NamedQueries(value = {
-        @NamedQuery(name = "_user.All", query = "from _user"),
-        @NamedQuery(name = "_user.checkUsernameAndPassword", query = "from _user as u where u.username =?0 AND u.password = ?1")
-})
 public class User extends PersonPhysique implements Serializable {
 
     @Column(columnDefinition = "TEXT")

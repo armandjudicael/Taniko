@@ -5,7 +5,7 @@ import lombok.Data;
 import mg.imwa.tenant.model.entityEnum.ModePayement;
 import mg.imwa.tenant.model.entityEnum.TypeTrosa;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 

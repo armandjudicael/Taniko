@@ -3,7 +3,7 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.UserType;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Data

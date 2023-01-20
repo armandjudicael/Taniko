@@ -3,7 +3,7 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "article")

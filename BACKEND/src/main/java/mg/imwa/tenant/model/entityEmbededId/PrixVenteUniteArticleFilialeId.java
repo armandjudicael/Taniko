@@ -3,8 +3,8 @@ package mg.imwa.tenant.model.entityEmbededId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.EmbeddedId;
 import java.io.Serializable;
 
 @Data

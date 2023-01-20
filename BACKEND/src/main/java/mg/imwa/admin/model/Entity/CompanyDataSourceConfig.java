@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.DatabaseType;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity

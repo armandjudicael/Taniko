@@ -3,7 +3,7 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.*;
 import mg.imwa.tenant.model.entityEnum.TypeMateriel;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity

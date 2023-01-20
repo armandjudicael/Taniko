@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import mg.imwa.tenant.model.entityEnum.Sexe;
 import mg.imwa.tenant.model.entityEnum.SituationMatrimoniale;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 

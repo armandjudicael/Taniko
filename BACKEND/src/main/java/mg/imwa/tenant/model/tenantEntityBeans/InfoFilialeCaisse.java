@@ -4,7 +4,7 @@ import lombok.Data;
 import mg.imwa.tenant.model.entityEnum.ModePayement;
 import mg.imwa.tenant.model.entityEnum.TypeOperationCaisse;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
