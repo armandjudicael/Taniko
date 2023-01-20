@@ -1,14 +1,19 @@
 package mg.imwa.config.securityConfig;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,46 +22,27 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.stream.Collectors;
 @Slf4j
-public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
-    // private final AuthenticationManager authenticationManager;
-    //  public CustomAuthenticationFilter(AuthenticationManager authenticationManager) {
-    //    this.authenticationManager = authenticationManager;
-    //}
-    // @Override
-    //  public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
-    //   String username = request.getParameter("username");
-    //    String password = request.getParameter("password");
-    //    log.info(" Username = "+username+" , password =   ",password);
-    //   UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username,password);
-    //    return authenticationManager.authenticate(authenticationToken);
-    //}
-    //  @Override
-    //    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
+@Component
+@AllArgsConstructor
+public class CustomAuthenticationFilter extends OncePerRequestFilter {
 
-    //      User admin = (User)authResult.getPrincipal();
-    //    Algorithm algorithm = Algorithm.HMAC256("Aj!30071999".getBytes());
+    private final CustomAuthenticationManager customAuthenticationManager;
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-            //    String accessToken = JWT.create()
-            //  .withSubject(admin.getUsername())
-            //    .withExpiresAt(new Date(System.currentTimeMillis()*10*60*1000))
-            //    .withIssuer(request.getRequestURI().toString())
-            //     .withClaim("roles",admin.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
-    //   .sign(algorithm);
+        // 1 - Create an authentication object wich is not yet authenticated
+        // 2 - Delegate the authentication object to the manager
+        // 3 - Get back the authentication for the manager
+        // 4 - if the object is authenticated then send th request to the next filter in the chain
 
-            //    String refreshToken = JWT.create()
-            //    .withSubject(admin.getUsername())
-            //     .withExpiresAt(new Date(System.currentTimeMillis()*30*60*1000))
-            //  .withIssuer(request.getRequestURI().toString())
-            //    .sign(algorithm);
+        String key = request.getHeader("key");
+        CustomAuthentication ca = new CustomAuthentication(key,false);
 
-            // response.setHeader("access_token",accessToken);
-    //response.setHeader("refresh_token",refreshToken);
+        Authentication a = customAuthenticationManager.authenticate(ca);
 
-    // }
-
-    // @Override
-  //  protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException{
-    //      log.error(" LOGIN FAILED ");
-    //     super.unsuccessfulAuthentication(request, response, failed);
-    //  }
+        if (a.isAuthenticated()){
+            SecurityContextHolder.getContext().setAuthentication(a);
+            filterChain.doFilter(request,response);
+        }
+    }
 }

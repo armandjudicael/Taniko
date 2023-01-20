@@ -15,5 +15,4 @@ public interface BasicServiceMethod<T> {
    List<T> findAll();
 
    T findById(Long id);
-
 }

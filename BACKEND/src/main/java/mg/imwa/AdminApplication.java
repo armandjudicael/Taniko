@@ -42,7 +42,7 @@ public class AdminApplication implements CommandLineRunner{
 			Admin admin = new Admin();
 			admin.setUserName(adminUsername);
 			admin.setPassword("Aj!30071999");
-			admin.setUserType(UserType.ERP_ADMIN);
+			admin.setUserType(UserType.SUPER_ADMIN);
 			mainUserService.create(admin);
 			initDefaultCompanydb();
 		}

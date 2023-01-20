@@ -8,8 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/api/imwa/v1")
-public class AdminUserController implements BasicControllerMethod<Admin> {
-
+public class AdminUserController implements BasicControllerMethod<Admin>{
     @Autowired
     private MainUserService mainUserService;
     @Override
@@ -17,27 +16,28 @@ public class AdminUserController implements BasicControllerMethod<Admin> {
     public ResponseEntity<Object> create(@RequestBody Admin admin){
         return new ResponseEntity<>(mainUserService.create(admin),HttpStatus.CREATED);
     }
-
     @Override
     @GetMapping("/admin-user")
     public ResponseEntity<Object> findAll() {
         return new ResponseEntity<>(mainUserService.findAll(),HttpStatus.OK);
     }
 
-
     @Override
-    @GetMapping("/admin-user/{id}")
+    @PutMapping("/admin-user/{id}")
     public ResponseEntity<Object> updateById(@RequestBody Admin newEntity, @PathVariable Long id){
         return new ResponseEntity<>(mainUserService.update(newEntity,id),HttpStatus.OK);
     }
 
     @Override
+    @GetMapping("/admin-user/{id}")
     public ResponseEntity<Object> findById( @PathVariable Long id) {
         return new ResponseEntity<>(mainUserService.findById(id),HttpStatus.OK);
     }
 
     @Override
+    @DeleteMapping("/admin-user/{id}")
     public ResponseEntity<Boolean> delete( @PathVariable  Long id) {
         return new ResponseEntity<>(mainUserService.deleteById(id),HttpStatus.OK);
     }
+
 }

@@ -20,9 +20,9 @@ import java.util.Optional;
 @Service
 @Slf4j
 @Transactional(transactionManager = "adminTransactionManager")
-public class MainUserService implements UserDetailsService,BasicServiceMethod<Admin>{
+public class MainUserService implements BasicServiceMethod<Admin>{
 
-    @Override public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
         log.info("  LOAD USER WITH THE USERNAME  "+username);
         Optional<Admin> byUserName = adminUserRepository.findByUserName(username);
         if (byUserName.isPresent()){
