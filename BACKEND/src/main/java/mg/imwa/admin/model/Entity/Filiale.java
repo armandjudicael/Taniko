@@ -15,5 +15,6 @@ public class Filiale implements Serializable {
    private String numTel;
    private String email;
    @OneToMany(fetch = FetchType.LAZY)
+   @JoinTable(name = "filiale_tenant_user")
    private List<TenantUser> tenantUsers;
 }

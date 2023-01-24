@@ -5,163 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6df602c-b0a4-4bb5-9f4c-c1de5c8d6ba8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_8_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_11_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_60.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_60.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_60.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_21_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_8_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_6_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_6_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomKeyAuthenticationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomKeyAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authentications/ApiKeyAuthentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/ApiKeyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_0_1_jre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/admin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/SubsidiaryController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Filiale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Filiale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/TenantUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/TenantUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/dbConfig/AdminConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/dbConfig/AdminConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/dbConfig/DefaultTenantConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/dbConfig/DefaultTenantConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authentications/CustomAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomAuthenticationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/InventoryAlertRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/InventoryAlertRessource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/PayementRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/PayementRessource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/servletController/MenuNavController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/servletController/MenuNavController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/ApprovArticleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/ApprovArticleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/ApprovisionnementId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/ApprovisionnementId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/ArticleUniteId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/ArticleUniteId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InfoArticleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InfoArticleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InfoArticleMagasinId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InfoArticleMagasinId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InfoVenteId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InfoVenteId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InventoryAlertId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/InventoryAlertId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/OperationCaisseId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/OperationCaisseId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/PrixArticleFilialeId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/PrixArticleFilialeId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/PrixVenteUniteArticleFilialeId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/PrixVenteUniteArticleFilialeId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/StockId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/StockId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/TransfertArticleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/TransfertArticleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/TransfertId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/TransfertId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/VoyageId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/VoyageId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/ArticleUnite.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/ArticleUnite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Avoir.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Avoir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Caisse.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Caisse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Categorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/ClientFournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/ClientFournisseur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Filiale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Filiale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonctionnalite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleMagasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleMagasin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleVoyage.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleVoyage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoFilialeCaisse.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoFilialeCaisse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoVente.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InfoVente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InventoryAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/InventoryAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Livraison.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Livraison.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Magasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Magasin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/MaterielTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/MaterielTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Payement.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Payement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Peremption.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Peremption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonMorale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonMorale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonPhysique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PrixArticleFiliale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PrixArticleFiliale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Sortie.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Sortie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Supply.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Supply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Trajet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Trajet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Transfert.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Transfert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/TransfertArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/TransfertArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Trosa.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Trosa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Unite.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Unite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Vente.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Vente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Voyage.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Voyage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/repository/TrosaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/repository/TrosaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/DATABASE_RESET.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/DATABASE_RESET.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +51,7 @@
         <option value="TypeScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -218,37 +96,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "js.last.introduce.type": "VAR",
-    "last_opened_file_path": "/home/kael/Downloads/ERP",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "copyright",
-    "spring.configuration.checksum": "21232f297a57a5a743894a0e4a801fc3",
-    "ts.external.directory.path": "/home/kael/Downloads/ERP/FRONT-END/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kael/Downloads/ERP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;21232f297a57a5a743894a0e4a801fc3&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/kael/Downloads/ERP/FRONT-END/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/BACKEND/src/main/resources" />
@@ -421,7 +299,18 @@
       <workItem from="1674202047027" duration="1782000" />
       <workItem from="1674213830401" duration="1723000" />
       <workItem from="1674216540496" duration="3292000" />
-      <workItem from="1674221014039" duration="5954000" />
+      <workItem from="1674221014039" duration="6212000" />
+      <workItem from="1674238529997" duration="3672000" />
+      <workItem from="1674312347576" duration="6668000" />
+      <workItem from="1674366481430" duration="4484000" />
+      <workItem from="1674384258292" duration="8573000" />
+      <workItem from="1674403240288" duration="2456000" />
+      <workItem from="1674463610542" duration="4826000" />
+      <workItem from="1674484039288" duration="1621000" />
+      <workItem from="1674491246313" duration="1340000" />
+      <workItem from="1674535800028" duration="176000" />
+      <workItem from="1674537345953" duration="117000" />
+      <workItem from="1674544968916" duration="3347000" />
     </task>
     <servers />
   </component>
@@ -447,79 +336,510 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="26" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>37</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java</url>
+          <line>28</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>38</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java</url>
+          <line>29</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>40</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java</url>
+          <line>31</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>42</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java</url>
+          <line>33</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationFilter.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationProvider.java</url>
-          <line>18</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java</url>
+          <line>16</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationProvider.java</url>
-          <line>19</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java</url>
+          <line>17</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationProvider.java</url>
-          <line>20</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java</url>
+          <line>18</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationProvider.java</url>
-          <line>21</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java</url>
+          <line>19</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationManager.java</url>
-          <line>17</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomAuthenticationManager.java</url>
+          <line>16</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationManager.java</url>
-          <line>18</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomAuthenticationManager.java</url>
+          <line>17</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/CustomAuthenticationManager.java</url>
-          <line>19</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomAuthenticationManager.java</url>
+          <line>18</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class</url>
+          <line>69</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class</url>
+          <line>84</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class</url>
+          <line>83</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class</url>
+          <line>82</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class</url>
+          <line>81</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/authentication/builders/AuthenticationManagerBuilder.class</url>
+          <line>39</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/authentication/builders/AuthenticationManagerBuilder.class</url>
+          <line>40</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0.jar!/org/springframework/security/config/annotation/authentication/builders/AuthenticationManagerBuilder.class</url>
+          <line>43</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>176</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>179</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>184</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>183</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>189</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>190</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>196</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.0.0/spring-security-web-6.0.0-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>194</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>199</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>202</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>155</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>158</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>164</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/6.0.0/spring-security-config-6.0.0-sources.jar!/org/springframework/security/config/annotation/web/configurers/HttpBasicConfigurer.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="141" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

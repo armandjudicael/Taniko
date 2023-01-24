@@ -1,14 +1,15 @@
 package mg.imwa.admin.model.Entity;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.UserType;
-import jakarta.persistence.*;
+import org.hibernate.Hibernate;
+
 import java.io.Serializable;
-@Getter
-@Setter
+import java.util.Objects;
+
 @Entity
 @Table(name = "Admin", indexes = {
         @Index(name = "idx_admin_id_username", columnList = "id, userName, password, userType")
@@ -18,9 +19,11 @@ import java.io.Serializable;
         @NamedQuery(name = "Admin.countBy", query = "select count(a) from Admin a"),
         @NamedQuery(name = "Admin.findAll", query = "select a from Admin a")
 })
-@Data
 @ToString
 @Slf4j
+@Getter
+@Setter
+@SuperBuilder
 public class Admin implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,45 +33,20 @@ public class Admin implements Serializable{
     @Enumerated(value = EnumType.STRING)
     private UserType userType;
 
-
-    // REMOVE
-
-    @PreRemove
-    public void preRemove() {
+    public Admin() {
 
     }
 
-    @PostRemove
-    public void postRemove() {
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Admin admin = (Admin) o;
+        return id != null && Objects.equals(id, admin.id);
     }
 
-    // UPDATE
-
-    @PostUpdate
-    public void postUpdate() {
-
-    }
-
-    @PreUpdate
-    public void preUpdate() {
-
-    }
-
-
-    // PERSIST
-    @PostPersist
-    public void postPersist() {
-
-    }
-
-    @PrePersist
-    public void prePersist() {
-
-    }
-
-    @PostLoad
-    public void postLoad() {
-
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }

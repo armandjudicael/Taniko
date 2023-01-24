@@ -1,7 +1,6 @@
-package mg.imwa.config.securityConfig;
-
+package mg.imwa.config.securityConfig.authenticationManager;
 import lombok.AllArgsConstructor;
-import org.apache.catalina.authenticator.BasicAuthenticator;
+import mg.imwa.config.securityConfig.authenticationProvider.CustomAuthenticationProvider;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
 @Component
 @AllArgsConstructor
 public class CustomAuthenticationManager implements AuthenticationManager {
-
     private final CustomAuthenticationProvider provider;
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -19,6 +17,5 @@ public class CustomAuthenticationManager implements AuthenticationManager {
         return provider.authenticate(authentication);
         throw new BadCredentialsException(" Authentication provider not supported ");
     }
-
 
 }

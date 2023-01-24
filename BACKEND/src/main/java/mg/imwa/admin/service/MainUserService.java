@@ -1,7 +1,9 @@
 package mg.imwa.admin.service;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Entity.Admin;
 import mg.imwa.admin.repository.AdminUserRepository;
+import mg.imwa.admin.repository.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -18,12 +20,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Slf4j
 @Transactional(transactionManager = "adminTransactionManager")
-public class MainUserService implements BasicServiceMethod<Admin>{
+@AllArgsConstructor
+public class MainUserService implements UserDetailsService,BasicServiceMethod<Admin>{
 
      public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
-        log.info("  LOAD USER WITH THE USERNAME  "+username);
         Optional<Admin> byUserName = adminUserRepository.findByUserName(username);
         if (byUserName.isPresent()){
             Admin admin = byUserName.get();
@@ -35,17 +36,14 @@ public class MainUserService implements BasicServiceMethod<Admin>{
         }
         return null;
     }
-
     @Override
     public Admin create(Admin object) {
         return adminUserRepository.save(object);
     }
-
     @Override
     public Admin updateById(Long id) {
         return null;
     }
-
     @Override
     public Admin update(Admin object,Long id){
         Optional<Admin> byId = adminUserRepository.findById(id);
@@ -76,10 +74,7 @@ public class MainUserService implements BasicServiceMethod<Admin>{
     }
     @Override
     public Admin findById(Long id) {
-        Admin admin = adminUserRepository.findById(id).get();
-        return admin;
+        return adminUserRepository.findById(id).orElseThrow(()->new RuntimeException(" User with the id ="+id+" doesn't exist "));
     }
-
-    @Autowired
-    private AdminUserRepository adminUserRepository;
+    private final AdminUserRepository adminUserRepository;
 }

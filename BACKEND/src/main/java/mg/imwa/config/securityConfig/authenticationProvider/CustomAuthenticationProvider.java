@@ -1,13 +1,11 @@
-package mg.imwa.config.securityConfig;
-
-import lombok.AllArgsConstructor;
+package mg.imwa.config.securityConfig.authenticationProvider;
+import mg.imwa.config.securityConfig.authentications.CustomAuthentication;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Component;
-
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider{
 

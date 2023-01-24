@@ -3,11 +3,14 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.Data;
 
 import jakarta.persistence.*;
+import lombok.experimental.SuperBuilder;
+
 import java.io.Serializable;
 
 @Entity
 @Data
 @Inheritance(strategy = InheritanceType.JOINED)
+@SuperBuilder
 public abstract class Person implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +30,8 @@ public abstract class Person implements Serializable {
 
     @Lob
     private byte[] photo;
+
+    public Person() {
+
+    }
 }

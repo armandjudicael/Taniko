@@ -1,4 +1,5 @@
 package mg.imwa;
+import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Entity.*;
 import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.admin.model.Enum.DatabaseType;
@@ -28,6 +29,7 @@ import java.util.Optional;
 		"mg.imwa.tenant.controller",
 		"mg.imwa.tenant.service"
 },exclude = {DataSourceAutoConfiguration.class})
+@Slf4j
 public class AdminApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(AdminApplication.class, args);
@@ -39,10 +41,7 @@ public class AdminApplication implements CommandLineRunner{
 		String adminUsername = "armand_judicael";
 		Optional<Admin> byUserName = mainUserService.findByUserName(adminUsername);
 		if (byUserName.isEmpty()){
-			Admin admin = new Admin();
-			admin.setUserName(adminUsername);
-			admin.setPassword("Aj!30071999");
-			admin.setUserType(UserType.SUPER_ADMIN);
+		    Admin admin = Admin.builder().password("Aj!30071999").userType(UserType.SUPER_ADMIN).userName(adminUsername).build();
 			mainUserService.create(admin);
 			initDefaultCompanydb();
 		}
@@ -50,32 +49,29 @@ public class AdminApplication implements CommandLineRunner{
 
 	private void initDefaultCompanydb(){
 
-		TenantUser defaultDbAdmin = new TenantUser();
-		defaultDbAdmin.setUserName("nirina");
-		defaultDbAdmin.setPassword("nirina");
-		defaultDbAdmin.setKey("default_company_db");
-		defaultDbAdmin.setUserType(UserType.COMPANY_ADMIN);
+		TenantUser defaultCompanyDb = TenantUser.builder().key("default_company_db").userName("nirina").password("nirina").build();
 
-		CompanyDataSourceConfig defaultcdc = new CompanyDataSourceConfig();
-		defaultcdc.setPassword("root");
-		defaultcdc.setUsername("postgres");
-		defaultcdc.setHost("localhost");
-		defaultcdc.setDatabaseName("default_company_db");
-		defaultcdc.setPort("5432");
-		defaultcdc.setDatabaseType(DatabaseType.POSTGRESQL);
-		defaultcdc.setDriverClassName("org.postgresql.Driver");
+		CompanyDataSourceConfig defaultcdc = CompanyDataSourceConfig.builder()
+				.password("root")
+				.username("postgres")
+				.host("localhost")
+				.databaseName("default_company_db")
+				.port("5432").databaseType(DatabaseType.POSTGRESQL)
+				.driverClassName("org.postgresql.Driver")
+				.build();
 
-		Company company = new Company();
-		company.setAdmin(defaultDbAdmin);
-		company.setCompanyStatus(CompanyStatus.ENABLED);
-		company.setSlogan("MATIO : 7 : 7");
-		company.setVerset("MATIO : 7 : 7");
-		company.setNumTel("0340588519");
-		company.setEmail("judicael.ratombotiana@gmail.com");
-		company.setNom("default_company");
-		company.setValidated(true);
-		company.setCompanyDataSourceConfig(defaultcdc);
+		Company company = Company.builder()
+				.admin(defaultCompanyDb)
+				.companyStatus(CompanyStatus.ENABLED)
+				.slogan("MATIO : 7 : 7")
+				.verset("MATIO : 7 : 7")
+				.numTel("0340588519")
+				.email("judicael.ratombotiana@gmail.com")
+				.isValidated(true)
+				.companyDataSourceConfig(defaultcdc)
+				.build();
 
+		log.info("  ====== INITIALIZE DEFAULT COMPANY DATABASE =======  ");
 		companyService.initializeAndSave(company);
 	}
 	@Autowired

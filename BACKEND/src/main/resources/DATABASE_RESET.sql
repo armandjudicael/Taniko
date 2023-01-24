@@ -1,6 +1,6 @@
 TRUNCATE TABLE company cascade;
-TRUNCATE TABLE filiale_tenant_users;
+TRUNCATE TABLE filiale_tenant_user;
 TRUNCATE TABLE person cascade ;
 TRUNCATE TABLE tenant_user cascade ;
-TRUNCATE TABLE company_data_source_config cascade ;
-delete from admin where user_name<>'armand_judicael';
+TRUNCATE TABLE company_datasource_config cascade ;
+delete from admin where username<>'armand_judicael';
