@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-12-22T08:12:31.603+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "message": "JSP file [/WEB-INF/jsp/login/tenant-user-login.jsp] not found",
+  "path": "/index"
+}

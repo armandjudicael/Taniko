@@ -1,6 +1,8 @@
 package mg.imwa.admin.model.Entity;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.CompanyStatus;
@@ -12,6 +14,7 @@ import java.util.List;
 @Data
 @Entity
 @SuperBuilder
+@AllArgsConstructor
 public class Company extends Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,11 +33,9 @@ public class Company extends Person {
     @OneToOne(cascade = CascadeType.PERSIST)
     private TenantUser admin;
     private boolean isValidated = true;
-
     public Company() {
 
     }
-
     @Override
     public String toString(){
         return "Company{" +
@@ -47,5 +48,4 @@ public class Company extends Person {
                 ", isValidated=" + isValidated +
                 '}';
     }
-
 }

@@ -1,10 +1,16 @@
 package mg.imwa.tenant.model.entityEmbededId;
 
-import lombok.Data;
+import lombok.*;
 
 import jakarta.persistence.Embeddable;
+
 import java.io.Serializable;
 
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Embeddable
 @Data
 public class VoyageId implements Serializable {

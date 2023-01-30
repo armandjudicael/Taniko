@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MY_SCHOOL_ADMIN">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.45">
+    <root id="1">
+      <ServerVersion>6.0.3</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="MY_SCHOOL_ADMIN">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="MY_SCHOOL_DEFAULT_CLIENT"/>
+    <schema id="4" parent="1" name="admin"/>
+    <schema id="5" parent="1" name="config"/>
+    <schema id="6" parent="1" name="local"/>
+    <schema id="7" parent="1" name="post_sharing"/>
+    <table id="8" parent="2" name="admin"/>
+  </database-model>
+</dataSource>

@@ -5,11 +5,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.UserType;
-import org.hibernate.Hibernate;
-
 import java.io.Serializable;
-import java.util.Objects;
-
 @Entity
 @Table(name = "Admin", indexes = {
         @Index(name = "idx_admin_id_username", columnList = "id, userName, password, userType")
@@ -24,6 +20,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @SuperBuilder
+@NoArgsConstructor
 public class Admin implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,21 +29,4 @@ public class Admin implements Serializable{
     private String password;
     @Enumerated(value = EnumType.STRING)
     private UserType userType;
-
-    public Admin() {
-
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Admin admin = (Admin) o;
-        return id != null && Objects.equals(id, admin.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
 }

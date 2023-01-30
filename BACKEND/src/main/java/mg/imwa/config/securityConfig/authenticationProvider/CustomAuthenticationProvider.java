@@ -19,7 +19,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider{
       if (key.equals(headerKey)) return new CustomAuthentication(null,true);
       throw new BadCredentialsException(" Wrong key ");
     }
-
     @Override
     public boolean supports(Class<?> authentication) {
         return CustomAuthentication.class.equals(authentication);

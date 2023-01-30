@@ -15,5 +15,19 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/default_company_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="MY_SCHOOL_ADMIN" uuid="73e11c11-97fc-498e-8df5-2d45ce46bb50">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://localhost:27017/MY_SCHOOL_ADMIN</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="MY_SCHOOL_DEFAULT_CLIENT" uuid="1071ad08-bd96-46ac-9a52-49f326435660">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://localhost:27017/MY_SCHOOL_DEFAULT_CLIENT</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

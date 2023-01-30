@@ -178,7 +178,6 @@ $(function () {
             updateLabelFooter();
         }
     });
-
     function updateLabelFooter(){
         $countArticle = $(namespace + '#table-liste-article-entree tbody tr').length;
         $sommeMontant = 0;
@@ -191,7 +190,6 @@ $(function () {
     };
 
     /* suppression articles à la table */
-
     $(document).on('dblclick', "#table-liste-article-entree tbody tr", function () {
         $(this).remove();
         let id = $(this).attr("id");
@@ -200,7 +198,6 @@ $(function () {
         $designation = $(this).children().eq(1).text();
         createToast('bg-danger', 'uil-trash-alt', 'Enlevement Article', $designation + ' supprim&eacute;')
     });
-
     function onSuppliesCreated() {
         supplyTab = [];
         pvuafTab = [];
@@ -213,7 +210,6 @@ $(function () {
             'Entr&eacute;e d\'article fait',
             $nArticle + ' articles enregistr&eacute;es avec succ&egrave;s!');
     }
-
     function persist_trosa(){
         let trosa = {};
         let fId = $(namespace + '#input-nom-fournisseur').attr("value-id");

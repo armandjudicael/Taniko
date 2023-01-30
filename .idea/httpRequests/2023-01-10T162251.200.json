@@ -1,0 +1,157 @@
+[
+  {
+    "id": 3,
+    "nom": "colis",
+    "adresse": "carriere",
+    "numTel": "+261 34 34 453 54",
+    "email": "judicael.ratombotiana@gmail.com",
+    "photo": null,
+    "verset": null,
+    "slogan": "Matio : 7 : 7 ",
+    "companyStatus": "ENABLED",
+    "companyDataSourceConfig": {
+      "id": 3,
+      "username": "postgres",
+      "password": "root",
+      "driverClassName": "org.postgresql.Driver",
+      "host": "localhost",
+      "port": "5432",
+      "databaseType": "POSTGRESQL",
+      "databaseName": "colis_db"
+    },
+    "filiales": [],
+    "validationKey": "Nipw9fTOfIheC57rYOwAYCVIfedUr6",
+    "admin": {
+      "id": 6,
+      "userName": "judicael",
+      "password": "judicael",
+      "key": "colis",
+      "userType": "SIMPLE_USER"
+    },
+    "validated": true
+  },
+  {
+    "id": 6,
+    "nom": "helena",
+    "adresse": "carriere",
+    "numTel": "0348023827",
+    "email": "dinokamisy@gmail.com",
+    "photo": null,
+    "verset": null,
+    "slogan": "Matio : 7 : 7 ",
+    "companyStatus": "ENABLED",
+    "companyDataSourceConfig": {
+      "id": 6,
+      "username": "postgres",
+      "password": "root",
+      "driverClassName": "org.postgresql.Driver",
+      "host": "localhost",
+      "port": "5432",
+      "databaseType": "POSTGRESQL",
+      "databaseName": "helena_db"
+    },
+    "filiales": [],
+    "validationKey": "fKiqlCueYTIAkEW0Jf80P1xQ4is6qx",
+    "admin": {
+      "id": 9,
+      "userName": "judicael",
+      "password": "era",
+      "key": "helena",
+      "userType": "SIMPLE_USER"
+    },
+    "validated": true
+  },
+  {
+    "id": 7,
+    "nom": "colix",
+    "adresse": "ankirihiry",
+    "numTel": "0329726223",
+    "email": "judicael.ratombotiana@gmail.com",
+    "photo": null,
+    "verset": null,
+    "slogan": "Matio : 7 : 7",
+    "companyStatus": "ENABLED",
+    "companyDataSourceConfig": {
+      "id": 7,
+      "username": "postgres",
+      "password": "root",
+      "driverClassName": "org.postgresql.Driver",
+      "host": "localhost",
+      "port": "5432",
+      "databaseType": "POSTGRESQL",
+      "databaseName": "colix_db"
+    },
+    "filiales": [],
+    "validationKey": "vcRZyoM5SNzyr22VYDag7FXNsICKVU",
+    "admin": {
+      "id": 10,
+      "userName": "tombo",
+      "password": "tombo",
+      "key": "colix",
+      "userType": "SIMPLE_USER"
+    },
+    "validated": true
+  },
+  {
+    "id": 8,
+    "nom": "soleil",
+    "adresse": "mangarivotra",
+    "numTel": "0340588519",
+    "email": "judicael.ratombotiana@gmail.com",
+    "photo": null,
+    "verset": null,
+    "slogan": "Matio : 7 : 7",
+    "companyStatus": "ENABLED",
+    "companyDataSourceConfig": {
+      "id": 8,
+      "username": "postgres",
+      "password": "root",
+      "driverClassName": "org.postgresql.Driver",
+      "host": "localhost",
+      "port": "5432",
+      "databaseType": "POSTGRESQL",
+      "databaseName": "soleil_db"
+    },
+    "filiales": [],
+    "validationKey": "RDubbvU0TnCyqERWsNigfpPHJok8Pi",
+    "admin": {
+      "id": 11,
+      "userName": "ra",
+      "password": "ra",
+      "key": "soleil",
+      "userType": "SIMPLE_USER"
+    },
+    "validated": true
+  },
+  {
+    "id": 9,
+    "nom": "kael",
+    "adresse": "valpinson",
+    "numTel": "454351313",
+    "email": "armandjudicaelratombotiana@gmail.com",
+    "photo": null,
+    "verset": null,
+    "slogan": "Matio : 7 : 7",
+    "companyStatus": "ENABLED",
+    "companyDataSourceConfig": {
+      "id": 9,
+      "username": "postgres",
+      "password": "root",
+      "driverClassName": "org.postgresql.Driver",
+      "host": "localhost",
+      "port": "5432",
+      "databaseType": "POSTGRESQL",
+      "databaseName": "kael_db"
+    },
+    "filiales": [],
+    "validationKey": "0xNNhsNJN5RhMRC4Gf2uasqYuiEXRK",
+    "admin": {
+      "id": 12,
+      "userName": "judi",
+      "password": "judi",
+      "key": "kael",
+      "userType": "SIMPLE_USER"
+    },
+    "validated": true
+  }
+]
