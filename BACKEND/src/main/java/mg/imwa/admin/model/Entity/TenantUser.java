@@ -16,7 +16,6 @@ import jakarta.persistence.*;
 @SuperBuilder
 public class TenantUser extends Admin{
     private String key;
-
     public TenantUser() {
 
     }

@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Table(name = "_user")
-public class User extends PersonPhysique implements Serializable {
+public class User extends PersonnePhysique implements Serializable {
 
     @Column(columnDefinition = "TEXT")
     private String username;

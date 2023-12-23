@@ -1,6 +1,6 @@
 package mg.imwa.tenant.controller.restController;
 
-import mg.imwa.tenant.model.tenantEntityBeans.PersonPhysique;
+import mg.imwa.tenant.model.tenantEntityBeans.PersonnePhysique;
 import mg.imwa.tenant.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ public class PersonnePhysiqueController {
     private PersonService personService;
 
     @PostMapping("/persons/fonction/{fonctionName}")
-    public ResponseEntity<Object> create(@RequestBody PersonPhysique ph, @PathVariable("fonctionName")String fonctionName){
+    public ResponseEntity<Object> create(@RequestBody PersonnePhysique ph, @PathVariable("fonctionName")String fonctionName){
         return new ResponseEntity<>(personService.persist(ph,fonctionName), HttpStatus.OK);
     }
 

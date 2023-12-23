@@ -1,14 +1,11 @@
 package mg.imwa.admin.model.Entity;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import lombok.extern.slf4j.Slf4j;
 import mg.imwa.admin.model.Enum.CompanyStatus;
 import mg.imwa.tenant.model.tenantEntityBeans.Person;
 import jakarta.persistence.*;
-import java.sql.Blob;
+
 import java.util.List;
 
 @Data

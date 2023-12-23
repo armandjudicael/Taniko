@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
 
 @Entity(name = "approv")
 @Table(name = "approv")

@@ -1,6 +1,5 @@
 package mg.imwa.tenant.model.tenantEntityBeans;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import mg.imwa.tenant.model.entityEnum.ModePayement;
 

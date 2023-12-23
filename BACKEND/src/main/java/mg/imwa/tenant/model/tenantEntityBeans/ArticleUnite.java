@@ -1,7 +1,6 @@
 package mg.imwa.tenant.model.tenantEntityBeans;
 
 import lombok.Data;
-import org.hibernate.annotations.Cascade;
 
 import jakarta.persistence.*;
 

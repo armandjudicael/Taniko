@@ -16,7 +16,6 @@ public class FeatureRessource {
     private FeatureRepository featureRepository;
 
     @Autowired
-
     public FeatureRessource(FeatureRepository featureRepository) {
         this.featureRepository = featureRepository;
     }

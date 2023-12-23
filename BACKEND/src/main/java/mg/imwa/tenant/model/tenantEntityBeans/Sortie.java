@@ -3,7 +3,6 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 import lombok.Data;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Data

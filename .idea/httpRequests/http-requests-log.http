@@ -1,3 +1,35 @@
+GET http://localhost:8080/api/imwa/v1/companies
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=769E1731FD807BC1E364E7D6595AD1FE
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/imwa/v1/companies
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=769E1731FD807BC1E364E7D6595AD1FE
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/imwa/v1/companies
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=7ECC07FBB95BF006616F5B082B6ADD1B
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/imwa/v1/companies
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Cookie: JSESSIONID=76DE482816F6B1B8FE7F0BA79C115624
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
 GET http://localhost:8080/api/imwa/v1/admin-user
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)

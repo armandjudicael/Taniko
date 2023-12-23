@@ -5,26 +5,393 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6df602c-b0a4-4bb5-9f4c-c1de5c8d6ba8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ERP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ERP.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1071ad08-bd96-46ac-9a52-49f326435660.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1071ad08-bd96-46ac-9a52-49f326435660.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fff3a5a-f221-49fe-85d1-a8d6a650794b/storage_v2/_src_/database/default_company_db.PkS97A/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73e11c11-97fc-498e-8df5-2d45ce46bb50.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73e11c11-97fc-498e-8df5-2d45ce46bb50.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e/storage_v2/_src_/database/admin_db.bnc8xg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e/storage_v2/_src_/database/admin_db.bnc8xg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e/storage_v2/_src_/database/admin_db.bnc8xg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e/storage_v2/_src_/database/admin_db.bnc8xg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e/storage_v2/_src_/database/admin_db.bnc8xg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1067100-d4dc-4aff-8b42-c25f9ed1dd2e/storage_v2/_src_/database/admin_db.bnc8xg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_4_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_3_18_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_electronwill_night_config_core_3_6_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_electronwill_night_config_toml_3_6_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_5_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_commons_1_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_observation_1_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_smallrye_jandex_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_10_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_10_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_10_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_23_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_jakarta_mail_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_9_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_3_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_2_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_metadata_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_properties_migrator_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_messaging_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/admin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/EmailInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/EmailInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Filiale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/Filiale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Enum/DatabaseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Enum/DatabaseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Enum/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Enum/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/MainUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/VoyageId.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/entityEmbededId/VoyageId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/webapp/assets/js/menu/operation/entree.js" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/webapp/assets/js/menu/operation/entree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/TenantUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/TenantUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/dbConfig/MapMultiTenantConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/dbConfig/MapMultiTenantConnectionProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomAuthenticationManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationManager/CustomKeyAuthenticationManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authenticationProvider/CustomKeyAuthenticationProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authentications/ApiKeyAuthentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/authentications/CustomAuthentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/ApiKeyFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/FeatureRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/FeatureRessource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/PersonnePhysiqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/controller/restController/PersonnePhysiqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/ArticleUnite.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/ArticleUnite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Avoir.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Avoir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Categorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Fonctionnalite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Magasin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Magasin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/MaterielTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/MaterielTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Payement.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Payement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonMorale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersoneMorale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PersonnePhysique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PrixArticleFiliale.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/PrixArticleFiliale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Sortie.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Sortie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Supply.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Supply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Transfert.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Transfert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/TransfertArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/TransfertArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Unite.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/Unite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/model/tenantEntityBeans/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/repository/PersonnePhysiqueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/repository/PersonnePhysiqueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/tenant/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/main/webapp/WEB-INF/jsp/menu-voyage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/main/webapp/WEB-INF/jsp/menu-voyage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/test/java/mg/imwa/admin/repository/AdminUserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/test/java/mg/imwa/admin/repository/AdminUserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/test/java/mg/imwa/admin/repository/CompanyRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/test/java/mg/imwa/admin/repository/CompanyRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/AdminApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/AdminApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/AdminUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/AdminUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/BasicControllerMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/BasicControllerMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Admin$AdminBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Admin$AdminBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Admin$AdminBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Admin$AdminBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Company$CompanyBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Company$CompanyBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Company$CompanyBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Company$CompanyBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/CompanyDataSourceConfig$CompanyDataSourceConfigBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/CompanyDataSourceConfig$CompanyDataSourceConfigBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/CompanyDataSourceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/EmailInfo$EmailInfoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/EmailInfo$EmailInfoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/EmailInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/EmailInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Filiale$FilialeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Filiale$FilialeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Filiale.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/Filiale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/TenantUser$TenantUserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/TenantUser$TenantUserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/TenantUser$TenantUserBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/TenantUser$TenantUserBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/TenantUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Entity/TenantUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Enum/CompanyStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Enum/CompanyStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Enum/DatabaseType.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Enum/DatabaseType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Enum/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/model/Enum/UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/AdminSubsidiaryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/AdminSubsidiaryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/AdminUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/AdminUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/CompanyDatasourceConfigRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/CompanyDatasourceConfigRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/CompanyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/CompanyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/TenantUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/repository/TenantUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/BasicServiceMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/BasicServiceMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/CompanyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/LoginService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/LoginService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/MainUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/admin/service/MainUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/AdminConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/AdminConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/DefaultTenantConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/DefaultTenantConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/DefaultTenantConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/DefaultTenantConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/MapMultiTenantConnectionProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/MapMultiTenantConnectionProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/TenantContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/TenantContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/TenantIdentifierResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/TenantIdentifierResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/appConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/dbConfig/appConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/securityConfig/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/securityConfig/authenticationManager/CustomAuthenticationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/securityConfig/authenticationProvider/CustomAuthenticationProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/securityConfig/authentications/CustomAuthentication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ActivityRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ActivityRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/CategoryRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/CategoryRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ClientFournisseurRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ClientFournisseurRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ExpirationRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ExpirationRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/FeatureRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/FeatureRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/FonctionRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/FonctionRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/IamRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/IamRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/IavRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/IavRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/InventoryAlertRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/InventoryAlertRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/InventoryRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/InventoryRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/InvoiceRegulationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/InvoiceRegulationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ItemRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ItemRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/MaterielTransportRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/MaterielTransportRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/PayementRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/PayementRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/PersonnePhysiqueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/PersonnePhysiqueController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/PriceRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/PriceRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SalesRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SalesRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SortieRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SortieRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/StoreRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/StoreRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SubsidiaryRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SubsidiaryRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SupplyRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/SupplyRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/TrajetRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/TrajetRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/TransfertRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/TransfertRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/TrosaRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/TrosaRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/UnityRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/UnityRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/UserRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/UserRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/VoyageRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/VoyageRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ifcRessource.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/restController/ifcRessource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/servletController/MenuNavController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/controller/servletController/MenuNavController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/exception/ResourceNotFountException.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/exception/ResourceNotFountException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/ApprovArticleId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/ApprovArticleId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/ApprovisionnementId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/ApprovisionnementId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/ArticleUniteId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/ArticleUniteId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InfoArticleId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InfoArticleId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InfoArticleMagasinId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InfoArticleMagasinId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InfoVenteId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InfoVenteId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InventoryAlertId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/InventoryAlertId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/OperationCaisseId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/OperationCaisseId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/PrixArticleFilialeId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/PrixArticleFilialeId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/PrixVenteUniteArticleFilialeId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/PrixVenteUniteArticleFilialeId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/StockId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/StockId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/TransfertArticleId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/TransfertArticleId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/TransfertId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/TransfertId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/VoyageId.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEmbededId/VoyageId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/ArticleStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/ArticleStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/DefaultPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/DefaultPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/ModePayement$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/ModePayement.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/ModePayement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/Sexe.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/Sexe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/SituationMatrimoniale.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/SituationMatrimoniale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/SocieteStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/SocieteStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/StatutVoyage.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/StatutVoyage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeMateriel.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeMateriel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeOperationCaisse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeOperationCaisse.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeOperationCaisse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeTrosa.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeTrosa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeVoyage.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/entityEnum/TypeVoyage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/ArticleUnite.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/ArticleUnite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Avoir.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Avoir.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Caisse.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Caisse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Categorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Categorie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/ClientFournisseur.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/ClientFournisseur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/EmbarquementArticle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Filiale.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Filiale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Fonction.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Fonction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Fonctionnalite.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Fonctionnalite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleMagasin.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleMagasin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleVoyage.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoArticleVoyage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoFilialeCaisse.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoFilialeCaisse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoVente.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InfoVente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InventoryAlert.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/InventoryAlert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Livraison.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Livraison.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Magasin.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Magasin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/MaterielTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/MaterielTransport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Payement.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Payement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Peremption.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Peremption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Person$PersonBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/PersonMorale.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/PersonPhysique.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/PrixArticleFiliale.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/PrixArticleFiliale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Sortie.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Sortie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Stock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Supply.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Supply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Trajet.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Trajet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Transfert.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Transfert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/TransfertArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/TransfertArticle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Trosa.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Trosa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Unite.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Unite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Vente.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Vente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Voyage.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/tenantEntityBeans/Voyage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/AuWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/AuWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/CashWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/CashWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/ExpirationDateWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/ExpirationDateWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/ExpirationWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/ExpirationWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/FactureWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/FactureWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/IfcWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/IfcWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/InventoryViewWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/InventoryViewWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/InventoryWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/InventoryWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/ItemWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/ItemWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/SupplyWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/model/wrapper/SupplyWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ActivityRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ActivityRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ArticleUniteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ArticleUniteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/CashRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/CashRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/CategorieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/CategorieRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ClientFournisseurRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ClientFournisseurRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/FeatureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/FeatureRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/FonctionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/FonctionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/IamRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/IamRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/IavRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/IavRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/IfcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/IfcRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/InventoryAlertRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/InventoryAlertRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/InventoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/InventoryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/InvoiceRegulationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/InvoiceRegulationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/ItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/LivraisonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/LivraisonRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/MaterielTransportRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/MaterielTransportRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PayementRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PayementRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PersonnePhysiqueRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PersonnePhysiqueRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PricesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PricesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PuafRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/PuafRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SalesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SalesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SortieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SortieRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/StoreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/StoreRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SubsidiaryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SubsidiaryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SupplyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/SupplyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/TrajetRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/TrajetRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/TransfertRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/TransfertRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/TrosaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/TrosaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/UniteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/UniteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/VenteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/VenteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/VoyageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/repository/VoyageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/ActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/ActivityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/CashService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/CashService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/FonctionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/FonctionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/IavService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/IavService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/ItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/MagasinService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/MagasinService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/PayementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/PayementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/PersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/RepoUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/RepoUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/SalesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/classes/mg/imwa/tenant/service/SalesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FRONT-END" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT-END" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,19 +430,21 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2JAcTHzgcj7UxcKqG4bgOMwmKmn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -95,29 +464,43 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-17&quot;,
     &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/kael/Downloads/ERP/ngx-admin/src/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/judic/IdeaProjects/ERP/FRONT-END&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.protractor.protractor_package&quot;: &quot;C:/Users/judic/IdeaProjects/ERP/FRONT-END/node_modules/protractor&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;21232f297a57a5a743894a0e4a801fc3&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/kael/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8214.52/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\judic\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;mongo&quot;
+      &quot;mongo&quot;,
+      &quot;postgresql&quot;
     ]
   }
 }</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+        <entry key="com.haulmont.rcb.storybook" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ngx-admin/src/app" />
@@ -130,20 +513,59 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.ERP-FRONTEND">
-    <configuration name="ERP-BACKEND | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/ERP-BACKEND.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #15" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="15" requestIdentifier="#15" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="16" requestIdentifier="#16" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #17" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="17" requestIdentifier="#17" runType="Run single request">
+  <component name="RunManager" selected="Spring Boot.ERP-BACKEND">
+    <configuration name="DATABASE_RESET.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/BACKEND/src/main/resources/DATABASE_RESET.sql" />
+      <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #20" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="20" requestIdentifier="#20" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #21" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="21" requestIdentifier="#21" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #22" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="22" requestIdentifier="#22" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests (packages-smoke)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/FRONT-END/packages-smoke/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/FRONT-END/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/FRONT-END/packages-smoke" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests (playground)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/FRONT-END/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/FRONT-END/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/FRONT-END" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (packages-smoke-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/FRONT-END/packages-smoke/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/FRONT-END/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (playground-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/FRONT-END/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/FRONT-END/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application (nebular)" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application (packages-smoke)" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
     <configuration name="ERP-BACKEND" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -153,36 +575,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ERP-openapi.yaml" type="SwaggerCodegen">
-      <option name="activeConfigurationType" value="FILE" />
-      <option name="configurationPath" value="" />
-      <option name="customJreEnabled" value="false" />
+    <configuration name="ERP-openapi.yaml" type="SwaggerCodegen" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
       <option name="customTemplatesPath" value="" />
-      <option name="enableDebugLogging" value="false" />
+      <option name="envs">
+        <map />
+      </option>
       <option name="generateToPath" value="$PROJECT_DIR$/gen" />
       <option name="generationParameters">
         <list />
       </option>
-      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
       <option name="jdkPath" value="Default" />
       <option name="language" value="java" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
       <option name="specificationPath" value="$APPLICATION_CONFIG_DIR$/openApiExport/ERP-openapi.yaml" />
+      <option name="workingDirectory" value="C:\Users\judic\AppData\Roaming\JetBrains\IntelliJIdea2023.2\openApiExport" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="SwaggerCodegen">
-      <option name="activeConfigurationType" value="FILE" />
-      <option name="configurationPath" value="" />
-      <option name="customJreEnabled" value="false" />
+    <configuration default="true" type="SwaggerCodegen" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
       <option name="customTemplatesPath" value="" />
-      <option name="enableDebugLogging" value="false" />
+      <option name="envs">
+        <map />
+      </option>
       <option name="generateToPath" value="$PROJECT_DIR$/gen" />
       <option name="generationParameters">
         <list />
       </option>
-      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
       <option name="jdkPath" value="Default" />
       <option name="language" value="java" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
       <option name="specificationPath" value="$APPLICATION_CONFIG_DIR$/openApiExport/ERP-openapi.yaml" />
+      <option name="workingDirectory" value="C:\Users\judic\AppData\Roaming\JetBrains\IntelliJIdea2023.2\openApiExport" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FRONT-END/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="FRONT-END/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server (nebular)" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/FRONT-END/nebular/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server (packages-smoke)" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/FRONT-END/packages-smoke/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="ERP-FRONTEND" type="js.build_tools.npm">
@@ -193,22 +663,30 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Database Script.DATABASE_RESET.sql" />
+      <item itemvalue="Docker.FRONT-END/Dockerfile" />
+      <item itemvalue="HTTP Request.generated-requests | #21" />
+      <item itemvalue="HTTP Request.generated-requests | #22" />
       <item itemvalue="HTTP Request.generated-requests | #20" />
-      <item itemvalue="HTTP Request.ERP-BACKEND | #1" />
-      <item itemvalue="HTTP Request.generated-requests | #15" />
-      <item itemvalue="HTTP Request.generated-requests | #16" />
-      <item itemvalue="HTTP Request.generated-requests | #17" />
+      <item itemvalue="JavaScript Debug.Angular Application (nebular)" />
+      <item itemvalue="JavaScript Debug.Angular Application (packages-smoke)" />
+      <item itemvalue="Karma.Tests (packages-smoke)" />
+      <item itemvalue="Karma.Tests (playground)" />
+      <item itemvalue="npm.Angular CLI Server (nebular)" />
+      <item itemvalue="npm.Angular CLI Server (packages-smoke)" />
       <item itemvalue="npm.ERP-FRONTEND" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.ERP-openapi.yaml" />
+      <item itemvalue="Protractor.E2E Tests (packages-smoke-e2e)" />
+      <item itemvalue="Protractor.E2E Tests (playground-e2e)" />
       <item itemvalue="Spring Boot.ERP-BACKEND" />
-      <item itemvalue="Swagger Codegen.ERP-openapi.yaml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.DATABASE_RESET.sql" />
+        <item itemvalue="HTTP Request.generated-requests | #22" />
+        <item itemvalue="HTTP Request.generated-requests | #21" />
         <item itemvalue="HTTP Request.generated-requests | #20" />
-        <item itemvalue="HTTP Request.generated-requests | #15" />
-        <item itemvalue="HTTP Request.generated-requests | #17" />
-        <item itemvalue="HTTP Request.ERP-BACKEND | #1" />
-        <item itemvalue="HTTP Request.generated-requests | #16" />
+        <item itemvalue="Docker.FRONT-END/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -329,6 +807,25 @@
       <workItem from="1674833819291" duration="2842000" />
       <workItem from="1674911552877" duration="2213000" />
       <workItem from="1675055764928" duration="948000" />
+      <workItem from="1700625623285" duration="3509000" />
+      <workItem from="1700656228810" duration="16000" />
+      <workItem from="1700689227506" duration="863000" />
+      <workItem from="1700728570839" duration="214000" />
+      <workItem from="1700781477383" duration="422000" />
+      <workItem from="1701272706645" duration="2283000" />
+      <workItem from="1701283850663" duration="115000" />
+      <workItem from="1701332524546" duration="2317000" />
+      <workItem from="1701614906878" duration="515000" />
+      <workItem from="1702145105433" duration="43000" />
+      <workItem from="1702213179558" duration="121000" />
+      <workItem from="1702215178878" duration="2300000" />
+      <workItem from="1702470395294" duration="5113000" />
+      <workItem from="1702715444140" duration="2936000" />
+      <workItem from="1702748051375" duration="1256000" />
+      <workItem from="1703252549490" duration="447000" />
+      <workItem from="1703258452403" duration="595000" />
+      <workItem from="1703261692276" duration="11919000" />
+      <workItem from="1703307645814" duration="1945000" />
     </task>
     <servers />
   </component>
@@ -349,6 +846,7 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/FRONT-END" />
+      <path value="$PROJECT_DIR$/FRONT-END/material-kit-react" />
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
@@ -818,6 +1316,11 @@
           <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/config/securityConfig/filters/CustomAuthenticationFilter.java</url>
           <line>32</line>
           <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BACKEND/src/main/java/mg/imwa/admin/model/Entity/TenantUser.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

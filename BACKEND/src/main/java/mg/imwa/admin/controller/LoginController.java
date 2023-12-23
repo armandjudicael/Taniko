@@ -6,8 +6,6 @@ import mg.imwa.admin.repository.TenantUserRepository;
 import mg.imwa.admin.service.LoginService;
 import mg.imwa.tenant.repository.SubsidiaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -80,7 +78,7 @@ public class LoginController{
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String key = request.getParameter("key");
-        return loginService.checkTenantandSubsidiary(username,password,key);
+        return loginService.checkTenantAndSubsidiary(username,password,key);
     }
 
 }

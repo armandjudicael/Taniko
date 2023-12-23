@@ -72,12 +72,10 @@
           </tr>
           </tbody>
         </table>
-
         <%= end_content_table() %>
       </div>
     </div>
   </div>
-
 </div>
 
 </div> <!-- container -->

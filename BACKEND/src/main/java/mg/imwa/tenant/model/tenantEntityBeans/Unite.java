@@ -2,8 +2,6 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

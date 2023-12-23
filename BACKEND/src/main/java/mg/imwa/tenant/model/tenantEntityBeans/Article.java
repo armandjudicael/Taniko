@@ -1,8 +1,7 @@
 package mg.imwa.tenant.model.tenantEntityBeans;
-
+import jakarta.persistence.Entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import jakarta.persistence.*;
 import java.io.Serializable;
 

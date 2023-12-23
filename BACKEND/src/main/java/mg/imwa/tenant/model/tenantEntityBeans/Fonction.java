@@ -1,16 +1,12 @@
 package mg.imwa.tenant.model.tenantEntityBeans;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import mg.imwa.tenant.model.entityEnum.DefaultPage;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import jakarta.persistence.*;
-import java.util.List;
+
 import java.util.Map;
-import java.util.Set;
 
 @Entity(name = "fonction")
 @Table(name = "fonction")

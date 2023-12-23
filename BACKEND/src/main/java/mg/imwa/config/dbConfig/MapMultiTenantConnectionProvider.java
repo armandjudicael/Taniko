@@ -16,9 +16,11 @@ public class MapMultiTenantConnectionProvider extends AbstractMultiTenantConnect
         return connectionProviderMap.values().iterator().next();
     }
 
-    @Override protected ConnectionProvider selectConnectionProvider(String tenantIdentifier){
-        return connectionProviderMap.get(tenantIdentifier);
+    @Override
+    protected ConnectionProvider selectConnectionProvider(Object o) {
+        return connectionProviderMap.get((String) o);
     }
+
 
     public Map<String, ConnectionProvider> getConnectionProviderMap() {
         return connectionProviderMap;

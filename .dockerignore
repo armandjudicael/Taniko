@@ -1,0 +1,32 @@
+**/node_modules/
+**/dist
+.git
+npm-debug.log
+.coverage
+.coverage.*
+.env
+.aws
+
+# Ignore the target directory where compiled classes and built artifacts are stored
+target/
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore Maven specific files
+mvnw
+mvnw.cmd
+.mvn/
+
+# Ignore log files
+logs/
+
+# Ignore Docker specific files if any
+Dockerfile
+docker-compose.yml
+
+# Ignore temporary files or caches
+*.tmp
+*.log
+*.swp

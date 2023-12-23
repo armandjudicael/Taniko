@@ -34,7 +34,7 @@ public class LoginService{
     @Autowired private MapMultiTenantConnectionProvider mapMultiTenantConnectionProvider;
     @Autowired private TenantUserRepository tenantUserRepository;
 
-    public ModelAndView checkTenantandSubsidiary(ModelAndView modelAndView,String companyName,String subisdiaryName){
+    public ModelAndView checkTenantAndSubsidiary(ModelAndView modelAndView, String companyName, String subisdiaryName){
         initCurrentDatasourceAndTenantContext(companyName);
         return modelAndView;
     }
@@ -124,7 +124,7 @@ public class LoginService{
         });
         return modelAndView;
     }
-    public ModelAndView checkTenantandSubsidiary(String username,String password,String key){
+    public ModelAndView checkTenantAndSubsidiary(String username, String password, String key){
             ModelAndView modelAndView = new ModelAndView(TENANT_LOGIN_VIEW);
             Optional<TenantUser> optionalTenantUser = tenantUserRepository.findByUsernameAndPasswordAndKey(username,password,key);
             if (optionalTenantUser.isPresent()){

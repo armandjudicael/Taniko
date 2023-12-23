@@ -2,17 +2,13 @@ package mg.imwa.tenant.model.tenantEntityBeans;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Data
-@Entity(name = "transfert")
+    @Entity(name = "transfert")
 @Table(name = "transfert")
 @NoArgsConstructor
 @NamedQueries({

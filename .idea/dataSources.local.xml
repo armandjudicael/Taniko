@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-223.8214.52">
+  <component name="dataSourceStorageLocal" created-in="IU-232.10227.8">
     <data-source name="ADMIN" uuid="d1067100-d4dc-4aff-8b42-c25f9ed1dd2e">
-      <database-info product="PostgreSQL" version="14.6 (Ubuntu 14.6-1.pgdg22.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="14.6" exact-driver-version="42.5">
+      <database-info product="PostgreSQL" version="16.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.1" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
@@ -10,23 +10,15 @@
       <user-name>postgres</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
-    <data-source name="DEFAULT_COMPANY" uuid="5fff3a5a-f221-49fe-85d1-a8d6a650794b">
-      <database-info product="PostgreSQL" version="14.6 (Ubuntu 14.6-1.pgdg22.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="14.6" exact-driver-version="42.5">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database">
+              <name qname="admin_db" />
+              <name qname="default_company_db" />
+              <node kind="schema" negative="1" />
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>
@@ -50,6 +42,15 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="default_company_db@localhost" uuid="d7c14cda-47e5-4b6e-98db-a1b9d82a135f">
+      <database-info product="PostgreSQL" version="16.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
