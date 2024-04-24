@@ -27,8 +27,8 @@ public class CompanyService implements BasicServiceMethod<Company> {
             "dinokamisy@gmail.com"};
     @Override
     public Company create(Company company){
-        String dbName = company.getCompanyDataSourceConfig().getDatabaseName();
-        if(databaseDontExistOnPgServer(dbName) && databaseDontExist(dbName)){
+        String dbName = company.getNom()+"_db";
+        if(databaseDontExistOnPgServer(dbName)){
                 try {
                     executeNativeQuery("CREATE DATABASE "+dbName+";");
                 } catch (SQLException e){
@@ -41,6 +41,8 @@ public class CompanyService implements BasicServiceMethod<Company> {
 
     public Company initializeAndSave(Company company){
         CompanyDataSourceConfig cdc = company.getCompanyDataSourceConfig();
+        cdc.setDatabaseName(company.getNom()+"_db");
+
         HikariDataSource hikariDataSource = cdc.initDatasource();
         executeFlywayMigration(hikariDataSource);
         String validationKey = generateValidationKey(company.getNom());

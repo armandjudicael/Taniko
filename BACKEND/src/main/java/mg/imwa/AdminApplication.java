@@ -52,10 +52,9 @@ public class AdminApplication implements CommandLineRunner{
 		TenantUser defaultCompanyDb = TenantUser.builder().key("default_company_db").userName("nirina").password("nirina").build();
 
 		CompanyDataSourceConfig defaultcdc = CompanyDataSourceConfig.builder()
-				.password("root")
+				.password("Aj!30071999")
 				.username("postgres")
 				.host("localhost")
-				.databaseName("default_company_db")
 				.port("5432").databaseType(DatabaseType.POSTGRESQL)
 				.driverClassName("org.postgresql.Driver")
 				.build();
@@ -67,6 +66,7 @@ public class AdminApplication implements CommandLineRunner{
 				.verset("MATIO : 7 : 7")
 				.numTel("0340588519")
 				.email("judicael.ratombotiana@gmail.com")
+				.nom("default")
 				.isValidated(true)
 				.companyDataSourceConfig(defaultcdc)
 				.build();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MY_SCHOOL_DEFAULT_CLIENT">
-  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.49">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.51">
     <root id="1"/>
     <schema id="2" parent="1" name="MY_SCHOOL_ADMIN"/>
     <schema id="3" parent="1" name="MY_SCHOOL_DEFAULT_CLIENT">

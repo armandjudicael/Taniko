@@ -25,7 +25,7 @@
       <jdbc-url>mongodb://localhost:27017/MY_SCHOOL_DEFAULT_CLIENT</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="default_company_db@localhost" uuid="d7c14cda-47e5-4b6e-98db-a1b9d82a135f">
+    <data-source source="LOCAL" name="DEFAULT_COMPANY" uuid="d7c14cda-47e5-4b6e-98db-a1b9d82a135f">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
